@@ -14,6 +14,7 @@ class Artikel extends Model
         'author',
         'image',
         'category',
-        'content'
+        'content_html',
+        'content_json'
     ];
 }

@@ -17,7 +17,8 @@ return new class extends Migration
             $table->string('author')->nullable();
             $table->string('image')->nullable();
             $table->enum('category',['informasi', 'berita', 'kemahasiswaan'])->default('informasi');
-            $table->text('content')->nullable();
+            $table->text('content_html')->nullable();
+            $table->json('content_json')->nullable();
             $table->timestamps();
         });
     }
