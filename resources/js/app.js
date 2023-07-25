@@ -1,4 +1,5 @@
 import './bootstrap'
+import tiptap from './tiptap'
 
 import Alpine from 'alpinejs'
 import collapse from '@alpinejs/collapse'
@@ -7,6 +8,7 @@ import PerfectScrollbar from 'perfect-scrollbar'
 window.PerfectScrollbar = PerfectScrollbar
 
 document.addEventListener('alpine:init', () => {
+    Alpine.data('tiptap',tiptap);
     Alpine.data('mainState', () => {
         let lastScrollTop = 0
         const init = function () {
@@ -71,6 +73,8 @@ document.addEventListener('alpine:init', () => {
     })
 })
 
-Alpine.plugin(collapse)
 
+
+window.Alpine = Alpine;
+Alpine.plugin(collapse)
 Alpine.start()

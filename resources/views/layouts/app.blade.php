@@ -29,7 +29,8 @@
             display: none;
         }
     </style>
-
+    @stack('styles')
+    @livewireStyles
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
@@ -66,7 +67,7 @@
                 </header>
 
                 <!-- Page Content -->
-                <main class="px-4 sm:px-6 flex-1">
+                <main class="flex-1 px-4 sm:px-6">
                     {{ $slot }}
                 </main>
 
@@ -75,5 +76,7 @@
             </div>
         </div>
     </div>
+    @livewireScripts
+    @stack('scripts')
 </body>
 </html>
