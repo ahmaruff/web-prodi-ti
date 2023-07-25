@@ -11,10 +11,13 @@ class Artikel extends Model
 
     protected $fillable = [
         'title',
+        'slug',
         'author',
         'image',
         'category',
         'content_html',
-        'content_json'
+        'content_json',
+        'is_published',
+        'published_at'
     ];
 }

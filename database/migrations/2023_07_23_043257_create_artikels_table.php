@@ -14,11 +14,14 @@ return new class extends Migration
         Schema::create('artikels', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->string('author')->nullable();
+            $table->string('slug');
+            $table->string('author')->default('admin');
             $table->string('image')->nullable();
-            $table->enum('category',['informasi', 'berita', 'kemahasiswaan'])->default('informasi');
+            $table->enum('category',['pengumuman', 'berita', 'kemahasiswaan'])->default('berita');
             $table->text('content_html')->nullable();
             $table->json('content_json')->nullable();
+            $table->boolean('is_published')->default(false);
+            $table->date('published_at')->nullable();
             $table->timestamps();
         });
     }
