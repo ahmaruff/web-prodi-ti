@@ -47,12 +47,20 @@
         Dummy Links
     </div>
 
+    <x-sidebar.link
+    title="Artikel"
+    href="{{route('artikel.index')}}"
+    :isActive="request()->routeIs('artikel.*')">
+        @slot('icon') <x-coolicon-notebook class="w-6 h-6"/>@endslot
+        Artikel
+    </x-sidebar>
+
     @php
         $links = array_fill(0, 20, '');
     @endphp
 
-    @foreach ($links as $index => $link)
+    {{-- @foreach ($links as $index => $link)
         <x-sidebar.link title="Dummy link {{ $index + 1 }}" href="#" />
-    @endforeach
+    @endforeach --}}
 
 </x-perfect-scrollbar>
