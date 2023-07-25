@@ -22,7 +22,7 @@
         </button>
         <button class="px-2 py-1 border-2 border-gray-700 rounded-lg"
         @click="toggleHeading(4)"
-        :class="{ 'bg-gray-700 text-gray-50' : isActive('heading', { level: 3 }, updatedAt) }"
+        :class="{ 'bg-gray-700 text-gray-50' : isActive('heading', { level: 4 }, updatedAt) }"
         >
             <x-coolicon-heading-h4 class="w-5" />
         </button>
@@ -77,25 +77,3 @@
       </div>
     <div x-ref="editor"></div>
 </div>
-@pushOnce('styles')
-<style>
-.editor-menu-fixed button {
-  border: 1px solid grey;
-  border-radius: 3px;
-  background: #e9e9e9;
-}
-
-.editor-menu-fixed button.is-active {
-  font-weight: bold;
-  background: #bfbfbf;
-  border-color: #333;
-}
-
-h1,
-h2,
-h3 {
-  font-weight: 400;
-}
-
-</style>
-@endPushOnce
