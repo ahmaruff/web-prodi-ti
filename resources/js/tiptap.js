@@ -54,7 +54,8 @@ export default (data_content) => {
                 ],
                 editorProps : {
                     attributes : {
-                        class : "min-h-[8rem] max-h-[100vh] pt-2 prose prose-dark overflow-y-auto focus:outline-none !w-full !max-w-full dark:prose-light resize-y"
+                        // class : "min-h-[8rem] max-h-[100vh] pt-2 prose prose-dark overflow-y-auto focus:outline-none !w-full !max-w-full dark:prose-light resize-y"
+                        class : "min-h-[8rem] max-h-screen overflow-y-auto focus:outline-none resize-y prose prose-slate md:prose-lg lg:prose-xl dark:prose-invert"
                     }
                 },
                 content : _this.data_content,
