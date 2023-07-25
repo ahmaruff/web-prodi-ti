@@ -1,7 +1,10 @@
 <main class="flex flex-col items-center flex-1 px-4 pt-6 sm:justify-center">
     <div>
         <a href="/">
-            <x-application-logo class="w-20 h-20" />
+            <div class="w-40">
+                <img src="/assets/images/logo/sm-fullcolor-bg-light.png" alt="Logo">
+            </div>
+            {{-- <x-application-logo class="w-20 h-20" /> --}}
         </a>
     </div>
 
