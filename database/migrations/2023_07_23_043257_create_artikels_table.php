@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('image')->nullable();
             $table->enum('category',['pengumuman', 'berita', 'kemahasiswaan'])->default('berita');
             $table->text('content_html')->nullable();
-            $table->json('content_json')->nullable();
+            $table->mediumText('content_json')->nullable();
             $table->boolean('is_published')->default(false);
             $table->date('published_at')->nullable();
             $table->timestamps();
