@@ -38,7 +38,7 @@
                         >
                     </label>
                 </div>
-                <div class="flex items-center mb-6 space-x-4">
+                <div class="flex items-center my-8 space-x-4">
                     <label for="image" class="flex items-center w-1/2">
                         <span class="mr-4 min-w-max">Gambar Illustrasi</span>
                         <input type="file" name="image" id=""
@@ -51,6 +51,7 @@
                         class="h-5 w-8 border-none appearance-none rounded-full bg-gray-100 before:pointer-events-none before:absolute before:h-5 before:w-5 before:m-0 before:rounded-full before:bg-transparent before:content-[''] after:absolute after:h-5 after:w-5 after:-mt-[1px] after:rounded-full after:bg-gray-300 after:transition-[background-color_0.2s,transform_0.2s] after:content-[''] checked:bg-purple-500 checked:after:absolute checked:after:-mt-[1px] checked:after:ml-4 checked:after:h-5 checked:after:w-5 checked:after:rounded-full checked:after:border-none checked:after:bg-purple-50 checked:after:shadow-[0_3px_1px_-2px_rgba(0,0,0,0.2),_0_2px_2px_0_rgba(0,0,0,0.14),_0_1px_5px_0_rgba(0,0,0,0.12)] checked:after:transition-[background-color_0.2s,transform_0.2s] checked:after:content-[''] hover:cursor-pointer hover:bg-gray-100 focus:outline-none focus:ring-0 focus:bg-purple-500 focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[3px_-1px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-5 focus:after:w-5 focus:after:rounded-full focus:after:content-[''] checked:focus:border-purple-500 checked:focus:bg-purple-500 checked:focus:before:ml-[1.0625rem] checked:focus:before:scale-100 checked:focus:before:shadow-[3px_-1px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] dark:bg-gray-600 dark:after:bg-gray-400 dark:checked:bg-purple-500 dark:checked:after:bg-purple-50 dark:focus:before:shadow-[3px_-1px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:before:shadow-[3px_-1px_0px_13px_#3b71ca]"
                         type="checkbox"
                         role="switch"
+                        name="is_published"
                          />
                         <label
                         class="inline-block pl-[0.15rem] hover:cursor-pointer"
