@@ -11,7 +11,7 @@ class StoreArtikelRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,10 +24,11 @@ class StoreArtikelRequest extends FormRequest
         return [
             'title' => ['required', 'string', 'max:255'],
             'author' =>['required', 'string', 'max:255'],
-            'image' => ['required', 'mimes:jpg,png'],
+            'image' => ['nullable', 'image', 'max:2048'],
             'category' => ['required', 'string'],
+            'is_published' => ['nullable', 'string'],
             'content_html' => ['nullable', 'string'],
-            'content_json' => ['nullable', 'json']
+            'content_json' => ['nullable', 'string'],
         ];
     }
 }
