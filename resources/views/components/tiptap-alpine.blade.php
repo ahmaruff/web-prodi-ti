@@ -1,4 +1,4 @@
-<div class="min-h-screen"
+<div class="min-h-[30rem] p-4"
     x-data="tiptap(content)" x-init="() => init($refs.editor)"
     {{-- wire:ignore {{$attributes->whereDoesntStartWith('wire:model')->merge(['class' => 'editor !w-full !max-w-full'])}} --}}
     >

@@ -14,16 +14,16 @@
             >
                 {{ csrf_field() }}
                 <label for="title" class="block">
-                    <span class="text-gray-700">Judul</span>
+                    <span class="">Judul</span>
                     <input type="text" name="title" id="" value="" placeholder="Judul Artikel"
-                    class="mt-1 block w-full rounded-md bg-gray-100 border-transparent focus:border-purple-500 focus:bg-white focus:ring-0"
+                    class="block w-full mt-1 bg-gray-100 border-transparent rounded-md dark: focus:border-purple-500 focus:bg-white focus:ring-0 dark:bg-dark-eval-2"
                     >
                 </label>
-                <div class="flex space-x-4 w-full justify-between my-4">
+                <div class="flex justify-between w-full my-4 space-x-4">
                     <label for="category" class="block w-1/2">
-                        <span class="text-gray-700">Kategori</span>
+                        <span class="">Kategori</span>
                         <select name="category" id=""
-                        class="mt-1 block w-full rounded-md bg-gray-100 border-transparent focus:border-purple-500 focus:bg-white focus:ring-0"
+                        class="block w-full mt-1 bg-gray-100 border-transparent rounded-md focus:border-purple-500 focus:bg-white focus:ring-0 dark:bg-dark-eval-2"
                         >
                             <option value="">Kategori</option>
                             <option value="pengumuman">Pengumuman</option>
@@ -32,24 +32,47 @@
                         </select>
                     </label>
                     <label for="author" class="block w-1/2">
-                        <span class="text-gray-700">Penulis</span>
+                        <span class="">Penulis</span>
                         <input type="text" name="author" id="" value="" placeholder="John Doe"
-                        class="mt-1 block w-full rounded-md bg-gray-100 border-transparent focus:border-purple-500 focus:bg-white focus:ring-0"
+                        class="block w-full mt-1 bg-gray-100 border-transparent rounded-md focus:border-purple-500 focus:bg-white focus:ring-0 dark:bg-dark-eval-2"
                         >
                     </label>
                 </div>
-                <label for="image" class="block mb-6">
-                    <span class="text-gray-700">Gambar Illustrasi</span>
-                    <input type="file" name="image" id=""
-                    class="block w-full mt-1 focus:border-none"
-                    >
-                </label>
-                <x-tiptap-alpine></x-tiptap-alpine>
+                <div class="flex items-center mb-6 space-x-4">
+                    <label for="image" class="flex items-center w-1/2">
+                        <span class="mr-4 min-w-max">Gambar Illustrasi</span>
+                        <input type="file" name="image" id=""
+                        class="block w-full m-0 text-sm bg-gray-100 rounded-md cursor-pointer file:px-2 file:border-none file:py-2 h-w-full focus:border-purple-500 dark:bg-dark-eval-2"
+                        >
+                    </label>
+
+                    <div class="w-1/2">
+                        <input
+                        class="h-5 w-8 border-none appearance-none rounded-full bg-gray-100 before:pointer-events-none before:absolute before:h-5 before:w-5 before:m-0 before:rounded-full before:bg-transparent before:content-[''] after:absolute after:h-5 after:w-5 after:-mt-[1px] after:rounded-full after:bg-gray-300 after:transition-[background-color_0.2s,transform_0.2s] after:content-[''] checked:bg-purple-500 checked:after:absolute checked:after:-mt-[1px] checked:after:ml-4 checked:after:h-5 checked:after:w-5 checked:after:rounded-full checked:after:border-none checked:after:bg-purple-50 checked:after:shadow-[0_3px_1px_-2px_rgba(0,0,0,0.2),_0_2px_2px_0_rgba(0,0,0,0.14),_0_1px_5px_0_rgba(0,0,0,0.12)] checked:after:transition-[background-color_0.2s,transform_0.2s] checked:after:content-[''] hover:cursor-pointer hover:bg-gray-100 focus:outline-none focus:ring-0 focus:bg-purple-500 focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[3px_-1px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-5 focus:after:w-5 focus:after:rounded-full focus:after:content-[''] checked:focus:border-purple-500 checked:focus:bg-purple-500 checked:focus:before:ml-[1.0625rem] checked:focus:before:scale-100 checked:focus:before:shadow-[3px_-1px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] dark:bg-gray-600 dark:after:bg-gray-400 dark:checked:bg-purple-500 dark:checked:after:bg-purple-50 dark:focus:before:shadow-[3px_-1px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:before:shadow-[3px_-1px_0px_13px_#3b71ca]"
+                        type="checkbox"
+                        role="switch"
+                         />
+                        <label
+                        class="inline-block pl-[0.15rem] hover:cursor-pointer"
+                        for="flexSwitchCheckDefault"
+                        >
+                            Terbitkan Sekarang
+                        </label>
+                    </div>
+                </div>
+
+                <div class="mb-4 bg-gray-100 rounded-lg dark:bg-dark-eval-2">
+                    <x-tiptap-alpine></x-tiptap-alpine>
+                </div>
+
                 {{-- <x-tiptap wire:model='content></x-tiptap> --}}
                 <input type="hidden" name="content_html" x-bind:value="content.html">
                 <input type="hidden" name="content_json" x-bind:value="JSON.stringify(content.json)">
                 <x-button type="submit" value="submit" variant="primary"
-                >Save</x-button>
+                >
+                    <x-coolicon-save class="w-4 h-4 mr-2"></x-coolicon-save>
+                    <span>Save</span>
+                </x-button>
             </form>
         </div>
     </div>
