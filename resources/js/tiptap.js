@@ -58,14 +58,15 @@ export default (data_content) => {
                         class : "min-h-[10rem] max-h-screen overflow-y-auto focus:outline-none resize-y prose prose-slate xl:prose-lg dark:prose-invert"
                     }
                 },
-                content : _this.data_content,
+                content : _this.data_content.html,
                 // content: this.data_content === "" ? '' : "<p>Hola</p>",
                 onCreate({ editor }) {
                     _this.updatedAt = Date.now();
                 },
                 onUpdate({ editor }) {
                     _this.updatedAt = Date.now();
-                    _this.data_content = editor.getHTML()
+                    _this.data_content.html = editor.getHTML();
+                    _this.data_content.json = editor.getJSON();
                     console.log(_this.data_content);
                 },
                 onSelectionUpdate({ editor }) {
