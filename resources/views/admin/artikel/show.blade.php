@@ -13,7 +13,7 @@
                     x-bind:class="category == 'berita' ? 'bg-green-600' : category == 'pengumuman' ? 'bg-pink-600' : category == 'kemahasiswaan' ? 'bg-amber-600' : 'bg-purple-600' ">
                         <p>{{ $artikel->category }}</p>
                     </div>
-                    <div class="flex items-center justify-end w-48 space-x-1 font-semibold">
+                    <div class="flex items-center justify-end space-x-1 font-semibold">
                         <div class="px-4 py-2 bg-gray-300 rounded-l-full dark:bg-dark-eval-2">
                             <p>{{ $artikel->author }}</p>
                         </div>
