@@ -13,6 +13,8 @@
     </x-slot>
 
     <div class="p-6 overflow-hidden bg-white rounded-md shadow-md dark:bg-dark-eval-1">
+        {{-- <livewire:datatable model="App\Models\Artikel" exclude="content_html,content_json,created_at,updated_at, slug, image," searchable="title, category"> --}}
         @livewire('show-artikel')
+        {{-- <livewire:restore-all model="App\Models\Artikel" /> --}}
     </div>
 </x-app-layout>
