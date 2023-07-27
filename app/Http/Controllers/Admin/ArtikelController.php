@@ -66,7 +66,9 @@ class ArtikelController extends Controller
      */
     public function show(Artikel $artikel)
     {
-        $data = [];
+        $data = [
+            'artikel' => $artikel,
+        ];
         return view('admin.artikel.show', $data);
     }
 
