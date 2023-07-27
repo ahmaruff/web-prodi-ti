@@ -72,7 +72,7 @@
         @click="toggleCodeBlock()"
         :class="{ 'bg-gray-700 text-gray-50' : isActive('codeBlock', updatedAt) }"
         >
-            <x-lucide-braces class="w-5" />
+            <x-lucide-curly-braces class="w-5" />
         </button>
         <button class="px-2 py-1 border-2 border-gray-700 rounded-lg"
         title="Bullet List"

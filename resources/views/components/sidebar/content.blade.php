@@ -26,7 +26,7 @@
     title="Artikel"
     href="{{route('artikel.index')}}"
     :isActive="request()->routeIs('artikel.*')">
-        @slot('icon') <x-lucide-scroll-text class="flex-shrink-0 w-6 h-6"/>@endslot
+        @slot('icon') <x-lucide-scroll class="flex-shrink-0 w-6 h-6"/>@endslot
         Artikel
     </x-sidebar>
 
