@@ -33,7 +33,7 @@
             class="hidden w-6 h-6 lg:block"
         />
 
-        <x-heroicon-o-x
+        <x-lucide-x
             aria-hidden="true"
             class="w-6 h-6 lg:hidden"
         />

@@ -3,7 +3,7 @@
         <span>Made with</span>
 
         <span>
-            <x-heroicon-s-heart class="w-6 h-6 text-red-500" />
+            <x-lucide-heart class="w-6 h-6 text-red-500" />
         </span>
 
         <span>by</span>

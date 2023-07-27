@@ -16,7 +16,7 @@
 
                     <x-form.input-with-icon-wrapper>
                         <x-slot name="icon">
-                            <x-heroicon-o-user aria-hidden="true" class="w-5 h-5" />
+                            <x-lucide-user aria-hidden="true" class="w-5 h-5" />
                         </x-slot>
 
                         <x-form.input
@@ -42,7 +42,7 @@
 
                     <x-form.input-with-icon-wrapper>
                         <x-slot name="icon">
-                            <x-heroicon-o-mail aria-hidden="true" class="w-5 h-5" />
+                            <x-lucide-mail aria-hidden="true" class="w-5 h-5" />
                         </x-slot>
 
                         <x-form.input
@@ -67,7 +67,7 @@
 
                     <x-form.input-with-icon-wrapper>
                         <x-slot name="icon">
-                            <x-heroicon-o-lock-closed aria-hidden="true" class="w-5 h-5" />
+                            <x-lucide-lock aria-hidden="true" class="w-5 h-5" />
                         </x-slot>
 
                         <x-form.input
@@ -92,7 +92,7 @@
 
                     <x-form.input-with-icon-wrapper>
                         <x-slot name="icon">
-                            <x-heroicon-o-lock-closed aria-hidden="true" class="w-5 h-5" />
+                            <x-lucide-lock aria-hidden="true" class="w-5 h-5" />
                         </x-slot>
 
                         <x-form.input
@@ -109,7 +109,7 @@
 
                 <div>
                     <x-button class="justify-center w-full gap-2">
-                        <x-heroicon-o-user-add class="w-6 h-6" aria-hidden="true" />
+                        <x-lucide-user-plus class="w-6 h-6" aria-hidden="true" />
 
                         <span>{{ __('Register') }}</span>
                     </x-button>

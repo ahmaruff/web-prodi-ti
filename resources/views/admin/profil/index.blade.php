@@ -6,7 +6,7 @@
             </h2>
             <x-button href="{{route('admin.profil-prodi.edit')}}" variant="primary"
             class="justify-center max-w-xs gap-2">
-                <x-heroicon-o-pencil-alt class="w-6 h-6" />
+                <x-lucide-file-edit class="w-6 h-6" />
                 <span>Edit Visi Misi</span>
             </x-button>
         </div>

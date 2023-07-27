@@ -79,7 +79,7 @@
                 <input type="hidden" name="content_json" x-bind:value="JSON.stringify(content.json)">
                 <x-button type="submit" value="submit" variant="primary"
                 >
-                    <x-coolicon-save class="w-4 h-4 mr-2"></x-coolicon-save>
+                    <x-lucide-save class="w-4 h-4 mr-2" />
                     <span>Save</span>
                 </x-button>
             </form>

@@ -10,7 +10,7 @@
         :isActive="request()->routeIs('dashboard')"
     >
         <x-slot name="icon">
-            <x-heroicon-o-home class="flex-shrink-0 w-6 h-6" aria-hidden="true" />
+            <x-lucide-home class="flex-shrink-0 w-6 h-6" aria-hidden="true" />
         </x-slot>
     </x-sidebar.link>
 
@@ -26,7 +26,7 @@
     title="Artikel"
     href="{{route('artikel.index')}}"
     :isActive="request()->routeIs('artikel.*')">
-        @slot('icon') <x-heroicon-o-document-text class="flex-shrink-0 w-6 h-6"/>@endslot
+        @slot('icon') <x-lucide-scroll-text class="flex-shrink-0 w-6 h-6"/>@endslot
         Artikel
     </x-sidebar>
 
@@ -35,7 +35,7 @@
         :active="Str::startsWith(request()->route()->uri(), 'admin/profil')"
     >
         <x-slot name="icon">
-            <x-heroicon-o-academic-cap class="flex-shrink-0 w-6 h-6" aria-hidden="true" />
+            <x-lucide-graduation-cap class="flex-shrink-0 w-6 h-6" aria-hidden="true" />
         </x-slot>
 
         <x-sidebar.sublink
