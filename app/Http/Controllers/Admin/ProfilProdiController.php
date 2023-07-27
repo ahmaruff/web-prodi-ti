@@ -102,9 +102,9 @@ class ProfilProdiController extends Controller
         // UPDATE or INSERT
         foreach($upsert as $data) {
             if($data->id != ''){
-                Tujuan::where('id', $data->id)->update(['tujuan' => $data->misi, 'updated_at' => now()]);
+                Tujuan::where('id', $data->id)->update(['tujuan' => $data->tujuan, 'updated_at' => now()]);
             }else {
-                Tujuan::create(['tujuan' => $data->misi]);
+                Tujuan::create(['tujuan' => $data->tujuan]);
             }
         }
 
