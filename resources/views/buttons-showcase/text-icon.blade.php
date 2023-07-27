@@ -37,7 +37,7 @@
                             size="{{ $size }}"
                             class="items-center gap-2"
                         >
-                            <x-heroicon-o-home
+                            <x-icons.github
                                 aria-hidden="true"
                                 class="{{ $size == 'sm' ? 'w-4 h-4' : ($size == 'base' ? 'w-6 h-6' : 'w-7 h-7' ) }}"
                             />

@@ -35,7 +35,7 @@
                             :variant="$variant"
                             :size="$size" :sr-text="$variant"
                         >
-                            <x-heroicon-o-home
+                            <x-icons.twitter
                                 class="{{ $size == 'sm' ? 'w-4 h-4' : ($size == 'base' ? 'w-6 h-6' : 'w-7 h-7' ) }}"
                             />
                         </x-button>
