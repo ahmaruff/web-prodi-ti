@@ -32,6 +32,7 @@ Route::middleware('auth')->prefix('admin')->group(function () {
     // PROFIL
     Route::prefix('profil')->group(function() {
         Route::get('/',[\App\Http\Controllers\Admin\ProfilProdiController::class, 'index'])->name('admin.profil-prodi.index');
+        Route::get('/edit',[\App\Http\Controllers\Admin\ProfilProdiController::class, 'edit'])->name('admin.profil-prodi.edit');
     });
     // Route::get('artikel', [\App\Http\Controllers\Admin\ArtikelController::class, 'index'])->name('admin.artikel.index');
     // Route::get('editor', [\App\Http\Controllers\Admin\ArtikelController::class, 'create'])->name('admin.artikel.create');
