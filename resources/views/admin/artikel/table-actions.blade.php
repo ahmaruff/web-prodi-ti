@@ -13,11 +13,15 @@
         <x-coolicon-note-edit class="w-4 h-4" />
     </x-button>
 
-    <x-button
-    href="{{ route('artikel.destroy', [$id]) }}"
-    icon-only variant="danger" size="sm" pill
-    >
-        <x-coolicon-trash-empty class="w-4 h-4" />
-    </x-button>
+    <form action="{{ route('artikel.destroy', [$id]) }}" method="post">
+        @method('DELETE')
+        @csrf
+        <x-button
+        type="submit"
+        icon-only variant="danger" size="sm" pill
+        >
+            <x-coolicon-trash-empty class="w-4 h-4" />
+        </x-button>
+    </form>
 
 </div>
