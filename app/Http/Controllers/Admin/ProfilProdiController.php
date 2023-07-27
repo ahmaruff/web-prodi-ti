@@ -3,9 +3,11 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Profil\Misi;
+use App\Models\Profil\Tujuan;
+use App\Models\Profil\Visi;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Str;
 
 class ProfilProdiController extends Controller
 {
@@ -31,23 +33,88 @@ class ProfilProdiController extends Controller
      */
     public function edit()
     {
-        $visi = DB::table('visis')->get('visi')->last();
-        $misi = DB::table('misis')->get('misi');
-        $tujuan = DB::table('tujuans')->get('tujuan');
+        $visi = DB::table('visis')->get()->last();
+        $misi = DB::table('misis')->get(['id','misi']);
+        $tujuan = DB::table('tujuans')->get(['id','tujuan']);
         $data = [
-            'visi' => $visi->visi,
+            'visi' => $visi,
             'misi' => $misi,
             'tujuan' => $tujuan
         ];
 
-        return view('admin.profil.edit', $data);
+        return view('admin.profil.edit-visi-misi', $data);
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request)
+    public function updateVisi(Request $request)
     {
-        //
+        $rules = [
+            'id' => ['required'],
+            'visi' => ['required', 'string']
+        ];
+
+        $validatedData = $request->validate($rules);
+
+        $update = Visi::where('id', $validatedData['id'])->update([ 'visi' => $validatedData['visi']]);
+        return redirect(route('admin.profil-prodi.edit'))->with('success', 'visi telah terupdate');
+    }
+
+    public function updateMisi(Request $request)
+    {
+        $rules = [
+            'upsert' => ['required', 'string'],
+            'delete' => ['required', 'string']
+        ];
+        $validatedData = $request->validate($rules);
+
+        $upsert = json_decode($validatedData['upsert']);
+        $delete = json_decode($validatedData['delete']);
+
+        // UPDATE or INSERT
+        foreach($upsert as $data) {
+            if($data->id != ''){
+                Misi::where('id', $data->id)->update(['misi' => $data->misi, 'updated_at' => now()]);
+            }else {
+                Misi::create(['misi' => $data->misi]);
+            }
+        }
+
+        // DELETE
+        foreach($delete as $data){
+            if($data->id !=''){
+                Misi::where('id', $data->id)->delete();
+            }
+        }
+
+        return redirect(route('admin.profil-prodi.edit'))->with('success', 'misi telah terupdate');
+    }
+
+    public function updateTujuan(Request $request)
+    {
+        $rules = [
+            'upsert' => ['required', 'string'],
+            'delete' => ['required', 'string']
+        ];
+        $validatedData = $request->validate($rules);
+
+        $upsert = json_decode($validatedData['upsert']);
+        $delete = json_decode($validatedData['delete']);
+
+        // UPDATE or INSERT
+        foreach($upsert as $data) {
+            if($data->id != ''){
+                Tujuan::where('id', $data->id)->update(['tujuan' => $data->misi, 'updated_at' => now()]);
+            }else {
+                Tujuan::create(['tujuan' => $data->misi]);
+            }
+        }
+
+        // DELETE
+        foreach($delete as $data){
+            if($data->id !=''){
+                Tujuan::where('id', $data->id)->delete();
+            }
+        }
+
+        return redirect(route('admin.profil-prodi.edit'))->with('success', 'tujuan telah terupdate');
     }
 }
