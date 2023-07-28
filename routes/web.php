@@ -37,6 +37,14 @@ Route::middleware('auth')->prefix('admin')->group(function () {
         Route::post('edit/misi',[\App\Http\Controllers\Admin\ProfilProdiController::class, 'updateMisi'])->name('admin.profil-prodi.update-misi');
         Route::post('edit/tujuan',[\App\Http\Controllers\Admin\ProfilProdiController::class, 'updateTujuan'])->name('admin.profil-prodi.update-tujuan');
 
+        Route::prefix('lulusan')->group(function() {
+            Route::get('/', [\App\Http\Controllers\Admin\ProfilLulusanController::class, 'index'])->name('admin.profil.lulusan.index');
+            Route::post('/', [\App\Http\Controllers\Admin\ProfilLulusanController::class, 'store'])->name('admin.profil.lulusan.store');
+            Route::get('/edit/{id}', [\App\Http\Controllers\Admin\ProfilLulusanController::class, 'edit'])->name('admin.profil.lulusan.edit');
+            Route::post('/edit/{id}', [\App\Http\Controllers\Admin\ProfilLulusanController::class, 'update'])->name('admin.profil.lulusan.update');
+            Route::delete('/', [\App\Http\Controllers\Admin\ProfilLulusanController::class, 'destroy'])->name('admin.profil.lulusan.destroy');
+        });
+
     });
     // Route::get('artikel', [\App\Http\Controllers\Admin\ArtikelController::class, 'index'])->name('admin.artikel.index');
     // Route::get('editor', [\App\Http\Controllers\Admin\ArtikelController::class, 'create'])->name('admin.artikel.create');

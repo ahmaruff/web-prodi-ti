@@ -45,8 +45,8 @@
         />
         <x-sidebar.sublink
             title="Profil Lulusan"
-            href="{{ route('buttons.icon') }}"
-            :active="request()->routeIs('buttons.icon')"
+            href="{{ route('admin.profil.lulusan.index') }}"
+            :active="request()->routeIs('admin.profil.lulusan.index')"
         />
 
         <x-sidebar.sublink
