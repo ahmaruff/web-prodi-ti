@@ -15,8 +15,8 @@ return new class extends Migration
             $table->id();
             $table->string('prodi')->default('Teknik Informatika');
             $table->string('no_sk');
-            $table->year('tahun_sk');
-            $table->date('kadaluarsa');
+            $table->date('tgl_terbit');
+            $table->date('tgl_kadaluarsa');
             $table->enum('status',['masih berlaku', 'kadaluarsa']);
             $table->enum('peringkat', ['A', 'B', 'C', 'Unggul', 'Baik Sekali', 'Baik', 'Tidak Terakreditasi']);
             $table->string('dokumen_sk')->nullable();

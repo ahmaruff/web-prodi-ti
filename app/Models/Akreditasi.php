@@ -12,8 +12,8 @@ class Akreditasi extends Model
     protected $fillable = [
         'prodi',
         'no_sk',
-        'tahun_sk',
-        'kadaluarsa',
+        'tgl_terbit',
+        'tgl_kadaluarsa',
         'peringkat',
         'status',
         'dokumen_sk',
