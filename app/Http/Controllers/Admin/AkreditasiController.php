@@ -122,6 +122,8 @@ class AkreditasiController extends Controller
      */
     public function destroy(Akreditasi $akreditasi)
     {
+        // remove old file
+        Storage::disk('public')->delete('uploads/akreditasi/'.$akreditasi->dokumen_sk);
         $akreditasi->delete();
         return redirect(route('admin.akreditasi.index'))->with('success', 'data akreditasi telah dihapus');
     }

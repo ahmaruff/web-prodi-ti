@@ -6,7 +6,7 @@
             </h2>
             <x-button href="{{route('admin.akreditasi.create')}}" variant="primary"
             class="justify-center max-w-xs gap-2">
-                <x-lucide-package-plus class="w-6 h-6" />
+                <x-lucide-file-plus-2 class="w-6 h-6" />
                 <span>Tambah Akreditasi</span>
             </x-button>
         </div>
