@@ -66,8 +66,8 @@
         />
         <x-sidebar.sublink
             title="Fasilitas"
-            href="{{ route('buttons.text-icon') }}"
-            :active="request()->routeIs('buttons.text-icon')"
+            href="{{ route('admin.fasilitas.index') }}"
+            :active="request()->routeIs('admin.dosen.index')"
         />
     </x-sidebar.dropdown>
 
