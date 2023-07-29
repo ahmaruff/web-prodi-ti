@@ -14,8 +14,8 @@ class Akreditasi extends Model
         'no_sk',
         'tahun_sk',
         'kadaluarsa',
-        'masa_berlaku',
-        'status_akreditasi',
+        'peringkat',
+        'status',
         'dokumen_sk',
     ];
 }

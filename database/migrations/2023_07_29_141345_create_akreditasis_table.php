@@ -17,8 +17,8 @@ return new class extends Migration
             $table->string('no_sk');
             $table->year('tahun_sk');
             $table->date('kadaluarsa');
-            $table->enum('masa_berlaku',['masih berlaku', 'kadaluarsa']);
-            $table->enum('status_akreditasi', ['A', 'B', 'C', 'Unggul', 'Baik Sekali', 'Baik', 'Tidak Terakreditasi']);
+            $table->enum('status',['masih berlaku', 'kadaluarsa']);
+            $table->enum('peringkat', ['A', 'B', 'C', 'Unggul', 'Baik Sekali', 'Baik', 'Tidak Terakreditasi']);
             $table->string('dokumen_sk')->nullable();
             $table->timestamps();
         });
