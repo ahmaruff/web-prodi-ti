@@ -51,8 +51,8 @@
 
         <x-sidebar.sublink
             title="Akreditasi"
-            href="{{ route('buttons.text-icon') }}"
-            :active="request()->routeIs('buttons.text-icon')"
+            href="{{ route('admin.akreditasi.index') }}"
+            :active="request()->routeIs('admin.akreditasi.index')"
         />
         <x-sidebar.sublink
             title="Struktur Organisasi"
@@ -67,7 +67,7 @@
         <x-sidebar.sublink
             title="Fasilitas"
             href="{{ route('admin.fasilitas.index') }}"
-            :active="request()->routeIs('admin.dosen.index')"
+            :active="request()->routeIs('admin.fasilitas.index')"
         />
     </x-sidebar.dropdown>
 

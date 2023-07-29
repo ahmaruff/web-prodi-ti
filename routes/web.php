@@ -56,23 +56,11 @@ Route::middleware('auth')->prefix('admin')->group(function () {
             Route::resource('fasilitas', '\App\Http\Controllers\Admin\FasilitasController', ['parameters' => ['fasilitas' => 'fasilitas']]);
         });
 
+        Route::name('admin.')->group(function(){
+            Route::resource('akreditasi', '\App\Http\Controllers\Admin\AkreditasiController');
+        });
+
     });
-    // Route::get('artikel', [\App\Http\Controllers\Admin\ArtikelController::class, 'index'])->name('admin.artikel.index');
-    // Route::get('editor', [\App\Http\Controllers\Admin\ArtikelController::class, 'create'])->name('admin.artikel.create');
 });
-
-// useless routes
-// Just to demo sidebar dropdown links active states.
-Route::get('/buttons/text', function () {
-    return view('buttons-showcase.text');
-})->middleware(['auth'])->name('buttons.text');
-
-Route::get('/buttons/icon', function () {
-    return view('buttons-showcase.icon');
-})->middleware(['auth'])->name('buttons.icon');
-
-Route::get('/buttons/text-icon', function () {
-    return view('buttons-showcase.text-icon');
-})->middleware(['auth'])->name('buttons.text-icon');
 
 require __DIR__ . '/auth.php';
