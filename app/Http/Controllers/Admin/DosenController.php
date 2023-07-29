@@ -6,6 +6,8 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreDosenRequest;
 use App\Http\Requests\UpdateDosenRequest;
 use App\Models\Dosen;
+use Illuminate\Support\Str;
+use Storage;
 
 class DosenController extends Controller
 {
@@ -14,9 +16,11 @@ class DosenController extends Controller
      */
     public function index()
     {
+        $dosen = Dosen::all();
         $data = [
-
+            'dosen' => $dosen
         ];
+
         return view('admin.profil.dosen.index',$data);
     }
 
@@ -36,7 +40,25 @@ class DosenController extends Controller
      */
     public function store(StoreDosenRequest $request)
     {
-        //
+        $validatedData = $request->validated();
+
+        if($request->file('image') && $request->file('image')->isValid()){
+
+            $file = $request->file('image');
+            $ext = $file->extension();
+
+            // GENERATING FILENAME
+            $filename = Str::lower($validatedData['nama']);
+            $filename = substr($filename, 0, strpos($filename, ","));
+            $filename = Str::slug($filename);
+            $filename = $filename.'_'.uniqid().'.'.$ext;
+            $file->storeAs('uploads/dosen',$filename,'public');
+
+            $validatedData['image'] = $filename;
+        }
+
+        Dosen::create($validatedData);
+        return redirect(route('admin.dosen.index'))->with('success', 'Data dosen telah ditambahkan');
     }
 
     /**
@@ -44,7 +66,11 @@ class DosenController extends Controller
      */
     public function show(Dosen $dosen)
     {
-        //
+        $data = [
+            'dosen' => $dosen,
+        ];
+
+        return view('admin.profil.dosen.show', $data);
     }
 
     /**
@@ -63,7 +89,29 @@ class DosenController extends Controller
      */
     public function update(UpdateDosenRequest $request, Dosen $dosen)
     {
-        //
+        $validatedData = $request->validated();
+
+        if($request->file('image') && $request->file('image')->isValid()){
+
+            //remove old image
+            if(isset($dosen->image)){
+                $oldfile = Storage::disk('public')->delete('/uploads/dosen/'.$dosen->image);
+            }
+            $file = $request->file('image');
+            $ext = $file->extension();
+
+            // GENERATING FILENAME
+            $filename = Str::lower($validatedData['nama']);
+            $filename = substr($filename, 0, strpos($filename, ","));
+            $filename = Str::slug($filename);
+            $filename = $filename.'_'.uniqid().'.'.$ext;
+            $file->storeAs('uploads/dosen',$filename,'public');
+
+            $validatedData['image'] = $filename;
+        }
+        Dosen::where('id', $dosen->id)->update($validatedData);
+        // Dosen::create($validatedData);
+        return redirect(route('admin.dosen.index'))->with('success', 'Data dosen telah diupdate');
     }
 
     /**
@@ -71,6 +119,8 @@ class DosenController extends Controller
      */
     public function destroy(Dosen $dosen)
     {
-        //
+        // dd($dosen);
+        $dosen->delete();
+        return redirect(route('admin.dosen.index'))->with('success', 'Data dosen telah dihapus');
     }
 }

@@ -11,7 +11,7 @@ class UpdateDosenRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -22,7 +22,13 @@ class UpdateDosenRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            "nama" => ['required', 'string'],
+            'nidn' => ['nullable', 'string'],
+            'email' => ['required' , 'email'],
+            'jabatan_struktural' => ['nullable', 'string'],
+            'jabatan_akademik' => ['nullable', 'string'],
+            'image' => ['nullable', 'image'],
+            'homebase' => ['nullable', 'string']
         ];
     }
 }
