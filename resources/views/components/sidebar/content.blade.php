@@ -56,8 +56,8 @@
         />
         <x-sidebar.sublink
             title="Struktur Organisasi"
-            href="{{ route('buttons.text-icon') }}"
-            :active="request()->routeIs('buttons.text-icon')"
+            href="{{ route('admin.profil-prodi.struktur') }}"
+            :active="request()->routeIs('admin.profil-prodi.struktur')"
         />
         <x-sidebar.sublink
             title="Dosen"

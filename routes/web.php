@@ -36,6 +36,10 @@ Route::middleware('auth')->prefix('admin')->group(function () {
         Route::post('edit/visi',[\App\Http\Controllers\Admin\ProfilProdiController::class, 'updateVisi'])->name('admin.profil-prodi.update-visi');
         Route::post('edit/misi',[\App\Http\Controllers\Admin\ProfilProdiController::class, 'updateMisi'])->name('admin.profil-prodi.update-misi');
         Route::post('edit/tujuan',[\App\Http\Controllers\Admin\ProfilProdiController::class, 'updateTujuan'])->name('admin.profil-prodi.update-tujuan');
+        Route::get('struktur-organisasi', [\App\Http\Controllers\Admin\ProfilProdiController::class, 'indexStrukturOrg'])->name('admin.profil-prodi.struktur');
+        Route::post('struktur-organisasi/update-kaprodi', [\App\Http\Controllers\Admin\ProfilProdiController::class, 'updateKaprodi'])->name('admin.profil-prodi.struktur.update-kaprodi');
+        Route::post('struktur-organisasi/update-sekprodi', [\App\Http\Controllers\Admin\ProfilProdiController::class, 'updateSekprodi'])->name('admin.profil-prodi.struktur.update-sekprodi');
+        Route::post('struktur-organisasi/update-bagan', [\App\Http\Controllers\Admin\ProfilProdiController::class, 'updateBagan'])->name('admin.profil-prodi.struktur.update-bagan');
 
         Route::prefix('lulusan')->group(function() {
             Route::get('/', [\App\Http\Controllers\Admin\ProfilLulusanController::class, 'index'])->name('admin.profil.lulusan.index');
