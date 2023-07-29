@@ -42,7 +42,7 @@
                     </label>
                     <label for="homebase" class="block w-1/2">
                         <span class="">Homebase</span>
-                        <input type="text" name="homebase" id="" value="{{$dosen->nidn}}" placeholder="Teknik Informatika"
+                        <input type="text" name="homebase" id="" value="{{$dosen->homebase}}" placeholder="Teknik Informatika"
                         class="block w-full mt-1 bg-gray-100 border-transparent rounded-md focus:border-purple-500 focus:bg-white focus:ring-0 dark:bg-dark-eval-2"
                         >
                         @if ($errors->has('homebase'))<span class="block w-full text-red-500 my-3">{{ $errors->first('homebase') }}</span> @endif
