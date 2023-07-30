@@ -71,6 +71,14 @@
         />
     </x-sidebar.dropdown>
 
+    <x-sidebar.link
+    title="Pusat Unduhan"
+    href="{{route('admin.unduhan.index')}}"
+    :isActive="request()->routeIs('admin.unduhan.*')">
+        @slot('icon') <x-lucide-download-cloud class="flex-shrink-0 w-6 h-6"/>@endslot
+        Pusat Unduhan
+    </x-sidebar>
+
     @php
         $links = array_fill(0, 20, '');
     @endphp

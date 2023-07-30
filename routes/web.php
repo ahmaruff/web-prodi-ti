@@ -59,7 +59,10 @@ Route::middleware('auth')->prefix('admin')->group(function () {
         Route::name('admin.')->group(function(){
             Route::resource('akreditasi', '\App\Http\Controllers\Admin\AkreditasiController');
         });
+    });
 
+    Route::name('admin.')->group(function(){
+        Route::resource('unduhan', '\App\Http\Controllers\Admin\UnduhanController');
     });
 });
 
