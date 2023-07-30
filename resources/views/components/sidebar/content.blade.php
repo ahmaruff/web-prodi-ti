@@ -14,21 +14,21 @@
         </x-slot>
     </x-sidebar.link>
 
+    <x-sidebar.link
+    title="Artikel"
+    href="{{route('admin.artikel.index')}}"
+    :isActive="request()->routeIs('admin.artikel.*')">
+        @slot('icon') <x-lucide-newspaper class="flex-shrink-0 w-6 h-6"/>@endslot
+        Artikel
+    </x-sidebar>
+
     <div
         x-transition
         x-show="isSidebarOpen || isSidebarHovered"
         class="text-sm text-gray-500"
     >
-        Dummy Links
+        Profile
     </div>
-
-    <x-sidebar.link
-    title="Artikel"
-    href="{{route('admin.artikel.index')}}"
-    :isActive="request()->routeIs('admin.artikel.*')">
-        @slot('icon') <x-lucide-scroll class="flex-shrink-0 w-6 h-6"/>@endslot
-        Artikel
-    </x-sidebar>
 
     <x-sidebar.dropdown
         title="Profil Prodi"
@@ -50,26 +50,34 @@
         />
         <x-sidebar.sublink
             title="Profil Lulusan"
-            href="{{ route('admin.profile-lulusan.index') }}"
-            :active="request()->routeIs('admin.profile-lulusan.index')"
-        />
-
-        <x-sidebar.sublink
-            title="Akreditasi"
-            href="{{ route('admin.akreditasi.index') }}"
-            :active="request()->routeIs('admin.akreditasi.index')"
-        />
-        <x-sidebar.sublink
-            title="Dosen"
-            href="{{ route('admin.dosen.index') }}"
-            :active="request()->routeIs('admin.dosen.index')"
-        />
-        <x-sidebar.sublink
-            title="Fasilitas"
-            href="{{ route('admin.fasilitas.index') }}"
-            :active="request()->routeIs('admin.fasilitas.index')"
+            href="{{ route('admin.profile-prodi.lulusan.index') }}"
+            :active="request()->routeIs('admin.profile-prodi.lulusan.index')"
         />
     </x-sidebar.dropdown>
+
+    <x-sidebar.link
+    title="Akreditasi"
+    href="{{route('admin.akreditasi.index')}}"
+    :isActive="request()->routeIs('admin.akreditasi.*')">
+        @slot('icon') <x-lucide-award class="flex-shrink-0 w-6 h-6"/>@endslot
+        Akreditasi
+    </x-sidebar>
+
+    <x-sidebar.link
+    title="Dosen"
+    href="{{route('admin.dosen.index')}}"
+    :isActive="request()->routeIs('admin.dosen.*')">
+        @slot('icon') <x-lucide-users class="flex-shrink-0 w-6 h-6"/>@endslot
+        Dosen
+    </x-sidebar>
+
+    <x-sidebar.link
+    title="Fasilitas"
+    href="{{route('admin.fasilitas.index')}}"
+    :isActive="request()->routeIs('admin.fasilitas.*')">
+        @slot('icon') <x-lucide-building class="flex-shrink-0 w-6 h-6"/>@endslot
+        Fasilitas
+    </x-sidebar>
 
     <x-sidebar.link
     title="Pusat Unduhan"

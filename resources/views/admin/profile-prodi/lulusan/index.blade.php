@@ -25,13 +25,13 @@
                 </div>
                 <div class="flex w-1/12 space-x-2">
                     <x-button
-                    href="{{ route('admin.profile-lulusan.edit',[$item->id]) }}"
+                    href="{{ route('admin.profile-prodi.lulusan.edit',[$item->id]) }}"
                     icon-only variant="warning" size="sm" pill
                     >
                         <x-lucide-edit class="w-4 h-4" />
                     </x-button>
 
-                    <form action="{{ route('admin.profile-lulusan.destroy', $item->id) }}" method="post">
+                    <form action="{{ route('admin.profile-prodi.lulusan.destroy', $item->id) }}" method="post">
                         @method('DELETE')
                         @csrf
                         <input type="hidden" name="id" value="{{$item->id}}">
@@ -50,7 +50,7 @@
     </div>
     <div class="my-4 p-6 overflow-hidden bg-white rounded-md shadow-md dark:bg-dark-eval-1">
         <h1 class="my-4 text-xl font-semibold leading-tight">Tambah Profil Lulusan</h1>
-        <form action="{{route('admin.profile-lulusan.store')}}" method="post">
+        <form action="{{route('admin.profile-prodi.lulusan.store')}}" method="post">
             @csrf
             <div>
                 <label for="title" class="block">

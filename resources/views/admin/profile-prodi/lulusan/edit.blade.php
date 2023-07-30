@@ -4,7 +4,7 @@
             <h2 class="text-xl font-semibold leading-tight">
                 Edit Profil Lulusan | {{$lulusan->id}}
             </h2>
-            <x-button href="{{route('admin.profile-lulusan.index')}}" variant="primary"
+            <x-button href="{{route('admin.profile-prodi.lulusan.index')}}" variant="primary"
             class="justify-center max-w-xs gap-2">
                 <x-lucide-arrow-left-circle class="w-6 h-6" />
                 <span>Kembali</span>
@@ -16,7 +16,7 @@
         {{ __("You're logged in!")  }}
     </div>
     <div class="p-6 overflow-hidden bg-white rounded-md shadow-md dark:bg-dark-eval-1">
-        <form action="{{route('admin.profile-lulusan.update', $lulusan->id)}}" method="post">
+        <form action="{{route('admin.profile-prodi.lulusan.update', $lulusan->id)}}" method="post">
             @method('PATCH')
             @csrf
             <div>

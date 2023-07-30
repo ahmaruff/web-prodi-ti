@@ -42,9 +42,9 @@ Route::middleware('auth')->prefix('admin')->group(function () {
                 Route::post('update-sekprodi', [\App\Http\Controllers\Admin\ProfilProdiController::class, 'updateSekprodi'])->name('struktur-org.update-sekprodi');
                 Route::post('update-bagan', [\App\Http\Controllers\Admin\ProfilProdiController::class, 'updateBagan'])->name('struktur-org.update-bagan');
             });
+            Route::resource('lulusan', '\App\Http\Controllers\Admin\ProfilLulusanController')->except('show');
         });
 
-        Route::resource('profile-lulusan', '\App\Http\Controllers\Admin\ProfilLulusanController')->except('show');
         Route::resource('dosen', '\App\Http\Controllers\Admin\DosenController');
         Route::resource('fasilitas', '\App\Http\Controllers\Admin\FasilitasController', ['parameters' => ['fasilitas' => 'fasilitas']]);
         Route::resource('akreditasi', '\App\Http\Controllers\Admin\AkreditasiController')->except('show');

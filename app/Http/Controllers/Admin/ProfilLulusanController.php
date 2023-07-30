@@ -19,7 +19,7 @@ class ProfilLulusanController extends Controller
             'lulusan' => $lulusan,
         ];
 
-        return view('admin.lulusan.index', $data);
+        return view('admin.profile-prodi.lulusan.index', $data);
     }
 
     /**
@@ -34,7 +34,7 @@ class ProfilLulusanController extends Controller
         $validatedData = $request->validate($rules);
         ProfilLulusan::create($validatedData);
 
-        return redirect(route('admin.profile-lulusan.index'))->with('success', 'profil lulusan telah dibuat');
+        return redirect(route('admin.profile-prodi.lulusan.index'))->with('success', 'profil lulusan telah dibuat');
     }
 
     /**
@@ -48,39 +48,39 @@ class ProfilLulusanController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(ProfilLulusan $profile_lulusan)
+    public function edit(ProfilLulusan $lulusan)
     {
         // $lulusan = ProfilLulusan::where('id', $id)->first();
         $data = [
-            'lulusan' => $profile_lulusan,
+            'lulusan' => $lulusan,
         ];
 
-        return view('admin.lulusan.edit', $data);
+        return view('admin.profile-prodi.lulusan.edit', $data);
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, ProfilLulusan $profile_lulusan)
+    public function update(Request $request, ProfilLulusan $lulusan)
     {
         $rules = [
             'profil_lulusan' => ['required', 'string'],
             'deskripsi' => ['required', 'string'],
         ];
         $validatedData = $request->validate($rules);
-        $profile_lulusan->update($validatedData);
+        $lulusan->update($validatedData);
         // ProfilLulusan::where('id', $id)->update($validatedData);
 
-        return redirect(route('admin.profile-lulusan.index'))->with('success', 'profil lulusan telah terupdate');
+        return redirect(route('admin.profile-prodi.lulusan.index'))->with('success', 'profil lulusan telah terupdate');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(ProfilLulusan $profile_lulusan)
+    public function destroy(ProfilLulusan $lulusan)
     {
-        $profile_lulusan->delete();
+        $lulusan->delete();
         // ProfilLulusan::where('id', $request->id)->delete();
-        return redirect(route('admin.profile-lulusan.index'))->with('success', 'profil lulusan berhasil dihapus');
+        return redirect(route('admin.profile-prodi.lulusan.index'))->with('success', 'profil lulusan berhasil dihapus');
     }
 }
