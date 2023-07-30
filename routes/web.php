@@ -44,11 +44,11 @@ Route::middleware('auth')->prefix('admin')->group(function () {
             });
         });
 
-        Route::resource('profile-lulusan', '\App\Http\Controllers\Admin\ProfilLulusanController');
+        Route::resource('profile-lulusan', '\App\Http\Controllers\Admin\ProfilLulusanController')->except('show');
         Route::resource('dosen', '\App\Http\Controllers\Admin\DosenController');
         Route::resource('fasilitas', '\App\Http\Controllers\Admin\FasilitasController', ['parameters' => ['fasilitas' => 'fasilitas']]);
         Route::resource('akreditasi', '\App\Http\Controllers\Admin\AkreditasiController')->except('show');
-        Route::resource('unduhan', '\App\Http\Controllers\Admin\UnduhanController');
+        Route::resource('unduhan', '\App\Http\Controllers\Admin\UnduhanController')->except('show');
         Route::resource('artikel','\App\Http\Controllers\Admin\ArtikelController');
 
     });

@@ -17,6 +17,7 @@
     </div>
     <div class="p-6 overflow-hidden bg-white rounded-md shadow-md dark:bg-dark-eval-1">
         <form action="{{route('admin.profile-lulusan.update', $lulusan->id)}}" method="post">
+            @method('PATCH')
             @csrf
             <div>
                 <label for="title" class="block">

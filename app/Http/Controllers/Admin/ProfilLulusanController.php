@@ -38,13 +38,21 @@ class ProfilLulusanController extends Controller
     }
 
     /**
+     * Display the specified resource.
+     */
+    public function show(ProfilLulusan $profile_lulusan)
+    {
+        //
+    }
+
+    /**
      * Show the form for editing the specified resource.
      */
-    public function edit($id)
+    public function edit(ProfilLulusan $profile_lulusan)
     {
-        $lulusan = ProfilLulusan::where('id', $id)->first();
+        // $lulusan = ProfilLulusan::where('id', $id)->first();
         $data = [
-            'lulusan' => $lulusan,
+            'lulusan' => $profile_lulusan,
         ];
 
         return view('admin.lulusan.edit', $data);
@@ -53,14 +61,15 @@ class ProfilLulusanController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, ProfilLulusan $profile_lulusan)
     {
         $rules = [
             'profil_lulusan' => ['required', 'string'],
             'deskripsi' => ['required', 'string'],
         ];
         $validatedData = $request->validate($rules);
-        ProfilLulusan::where('id', $id)->update($validatedData);
+        $profile_lulusan->update($validatedData);
+        // ProfilLulusan::where('id', $id)->update($validatedData);
 
         return redirect(route('admin.profile-lulusan.index'))->with('success', 'profil lulusan telah terupdate');
     }
@@ -68,9 +77,10 @@ class ProfilLulusanController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Request $request)
+    public function destroy(ProfilLulusan $profile_lulusan)
     {
-        ProfilLulusan::where('id', $request->id)->delete();
+        $profile_lulusan->delete();
+        // ProfilLulusan::where('id', $request->id)->delete();
         return redirect(route('admin.profile-lulusan.index'))->with('success', 'profil lulusan berhasil dihapus');
     }
 }
