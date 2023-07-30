@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreArtikelRequest;
 use App\Http\Requests\UpdateArtikelRequest;
 use App\Models\Artikel;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 use PhpOffice\PhpSpreadsheet\Calculation\Category;
 
@@ -118,6 +119,9 @@ class ArtikelController extends Controller
 
         // if image isset
         if($request->file('image') && $request->file('image')->isValid()){
+            //remove old file
+            Storage::disk('public')->delete('uploads/artikel/'.$artikel->image);
+
             $file = $validatedData['image'];
             $id = $artikel->id;
             $ext = $file->extension();
@@ -137,6 +141,8 @@ class ArtikelController extends Controller
      */
     public function destroy(Artikel $artikel)
     {
+        //remove old file
+        Storage::disk('public')->delete('uploads/artikel/'.$artikel->image);
         $artikel->delete();
         return redirect(route('artikel.index'))->with('success', 'Artikel berhasil dihapus');
     }
