@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('prestasis', function (Blueprint $table) {
             $table->id();
             $table->string('juara');
+            $table->date('tanggal');
             $table->string('deskripsi');
             $table->string('nama_kompetisi');
             $table->enum('tingkatan',['kampus','kabupaten','provinsi','nasional','internasional']);

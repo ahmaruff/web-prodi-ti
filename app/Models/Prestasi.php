@@ -11,6 +11,7 @@ class Prestasi extends Model
 
     protected $fillable = [
         'juara',
+        'tanggal',
         'deskripsi',
         'nama_kompetisi',
         'tingkatan',
