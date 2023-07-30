@@ -4,7 +4,7 @@
             <h2 class="text-xl font-semibold leading-tight">
                 {{ __('Artikel') }}
             </h2>
-            <x-button href="{{route('artikel.create')}}" variant="primary"
+            <x-button href="{{route('admin.artikel.create')}}" variant="primary"
             class="justify-center max-w-xs gap-2">
                 <x-lucide-file-plus-2 class="w-6 h-6" />
                 <span>Buat Artikel Baru</span>

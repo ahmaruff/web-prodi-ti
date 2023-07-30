@@ -24,15 +24,15 @@
 
     <x-sidebar.link
     title="Artikel"
-    href="{{route('artikel.index')}}"
-    :isActive="request()->routeIs('artikel.*')">
+    href="{{route('admin.artikel.index')}}"
+    :isActive="request()->routeIs('admin.artikel.*')">
         @slot('icon') <x-lucide-scroll class="flex-shrink-0 w-6 h-6"/>@endslot
         Artikel
     </x-sidebar>
 
     <x-sidebar.dropdown
         title="Profil Prodi"
-        :active="Str::startsWith(request()->route()->uri(), 'admin/profil')"
+        :active="Str::startsWith(request()->route()->uri(), 'admin/profile-prodi')"
     >
         <x-slot name="icon">
             <x-lucide-graduation-cap class="flex-shrink-0 w-6 h-6" aria-hidden="true" />
@@ -40,24 +40,24 @@
 
         <x-sidebar.sublink
             title="Visi Misi"
-            href="{{ route('admin.profil-prodi.index') }}"
-            :active="request()->routeIs('admin.profil-prodi.index')"
+            href="{{ route('admin.profile-prodi.visi-misi.index') }}"
+            :active="request()->routeIs('admin.profile-prodi.visi-misi.index')"
+        />
+        <x-sidebar.sublink
+            title="Struktur Organisasi"
+            href="{{ route('admin.profile-prodi.struktur-org.index') }}"
+            :active="request()->routeIs('admin.profile-prodi.struktur-org.index')"
         />
         <x-sidebar.sublink
             title="Profil Lulusan"
-            href="{{ route('admin.profil.lulusan.index') }}"
-            :active="request()->routeIs('admin.profil.lulusan.index')"
+            href="{{ route('admin.profile-lulusan.index') }}"
+            :active="request()->routeIs('admin.profile-lulusan.index')"
         />
 
         <x-sidebar.sublink
             title="Akreditasi"
             href="{{ route('admin.akreditasi.index') }}"
             :active="request()->routeIs('admin.akreditasi.index')"
-        />
-        <x-sidebar.sublink
-            title="Struktur Organisasi"
-            href="{{ route('admin.profil-prodi.struktur') }}"
-            :active="request()->routeIs('admin.profil-prodi.struktur')"
         />
         <x-sidebar.sublink
             title="Dosen"

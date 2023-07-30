@@ -16,7 +16,7 @@ class ProfilProdiController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function indexVisiMisi()
     {
         $visi = DB::table('visis')->get('visi')->last();
         $misi = DB::table('misis')->get('misi');
@@ -27,13 +27,13 @@ class ProfilProdiController extends Controller
             'tujuan' => $tujuan
         ];
 
-        return view('admin.profil.index', $data);
+        return view('admin.profile-prodi.visi-misi', $data);
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit()
+    public function editVisiMisi()
     {
         $visi = DB::table('visis')->get()->last();
         $misi = DB::table('misis')->get(['id','misi']);
@@ -44,7 +44,7 @@ class ProfilProdiController extends Controller
             'tujuan' => $tujuan
         ];
 
-        return view('admin.profil.edit-visi-misi', $data);
+        return view('admin.profile-prodi.edit-visi-misi', $data);
     }
 
     public function updateVisi(Request $request)
@@ -57,7 +57,7 @@ class ProfilProdiController extends Controller
         $validatedData = $request->validate($rules);
 
         $update = Visi::where('id', $validatedData['id'])->update([ 'visi' => $validatedData['visi']]);
-        return redirect(route('admin.profil-prodi.edit'))->with('success', 'visi telah terupdate');
+        return redirect(route('admin.profile-prodi.visi-misi.edit'))->with('success', 'visi telah terupdate');
     }
 
     public function updateMisi(Request $request)
@@ -87,7 +87,7 @@ class ProfilProdiController extends Controller
             }
         }
 
-        return redirect(route('admin.profil-prodi.edit'))->with('success', 'misi telah terupdate');
+        return redirect(route('admin.profile-prodi.visi-misi.edit'))->with('success', 'misi telah terupdate');
     }
 
     public function updateTujuan(Request $request)
@@ -117,7 +117,7 @@ class ProfilProdiController extends Controller
             }
         }
 
-        return redirect(route('admin.profil-prodi.edit'))->with('success', 'tujuan telah terupdate');
+        return redirect(route('admin.profile-prodi.visi-misi.edit'))->with('success', 'tujuan telah terupdate');
     }
 
     // STRUKTUR ORGANISASI
@@ -136,7 +136,7 @@ class ProfilProdiController extends Controller
             'list_dosen' => $list_dosen,
         ];
 
-        return view('admin.profil.struktur-organisasi', $data);
+        return view('admin.profile-prodi.struktur-organisasi', $data);
     }
 
     public function updateKaprodi(Request $request){
@@ -152,7 +152,7 @@ class ProfilProdiController extends Controller
         // update kaprodi baru
         Dosen::where('id', $validatedData['kaprodi'])->update(['jabatan_struktural' => 'Ketua Program Studi Teknik Informatika']);
 
-        return redirect(route('admin.profil-prodi.struktur'))->with('success', 'kaprodi telah di update');
+        return redirect(route('admin.profile-prodi.struktur-org.index'))->with('success', 'kaprodi telah di update');
     }
 
     public function updateSekprodi(Request $request){
@@ -168,7 +168,7 @@ class ProfilProdiController extends Controller
         // update kaprodi baru
         Dosen::where('id', $validatedData['sekprodi'])->update(['jabatan_struktural' => 'Sekretaris Program Studi Teknik Informatika']);
 
-        return redirect(route('admin.profil-prodi.struktur'))->with('success', 'sekprodi telah di update');
+        return redirect(route('admin.profile-prodi.struktur-org.index'))->with('success', 'sekprodi telah di update');
     }
 
     public function updateBagan(Request $request){
@@ -194,6 +194,6 @@ class ProfilProdiController extends Controller
             Storage::disk('public')->put('/uploads/struktur.txt',$newfilename.PHP_EOL);
         }
 
-        return redirect(route('admin.profil-prodi.struktur'))->with('success', 'bagan telah di update');
+        return redirect(route('admin.profile-prodi.struktur-org.index'))->with('success', 'bagan telah di update');
     }
 }

@@ -21,7 +21,7 @@ class AkreditasiController extends Controller
             'akreditasi' => $akreditasi,
         ];
 
-        return view('admin.profil.akreditasi.index', $data);
+        return view('admin.akreditasi.index', $data);
     }
 
     /**
@@ -29,7 +29,7 @@ class AkreditasiController extends Controller
      */
     public function create()
     {
-        return view('admin.profil.akreditasi.create');
+        return view('admin.akreditasi.create');
     }
 
     /**
@@ -80,7 +80,7 @@ class AkreditasiController extends Controller
             'akreditasi' => $akreditasi
         ];
 
-        return view('admin.profil.akreditasi.edit', $data);
+        return view('admin.akreditasi.edit', $data);
     }
 
     /**

@@ -20,7 +20,7 @@ class FasilitasController extends Controller
             'fasilitas' => $fasilitas
         ];
 
-        return view('admin.profil.fasilitas.index', $data);
+        return view('admin.fasilitas.index', $data);
     }
 
     /**
@@ -28,7 +28,7 @@ class FasilitasController extends Controller
      */
     public function create()
     {
-        return view('admin.profil.fasilitas.create');
+        return view('admin.fasilitas.create');
     }
 
     /**
@@ -67,7 +67,7 @@ class FasilitasController extends Controller
             'fasilitas' => $fasilitas,
         ];
 
-        return view('admin.profil.fasilitas.show',$data);
+        return view('admin.fasilitas.show',$data);
     }
 
     /**
@@ -79,7 +79,7 @@ class FasilitasController extends Controller
             'fasilitas' => $fasilitas
         ];
 
-        return view('admin.profil.fasilitas.edit', $data);
+        return view('admin.fasilitas.edit', $data);
     }
 
     /**

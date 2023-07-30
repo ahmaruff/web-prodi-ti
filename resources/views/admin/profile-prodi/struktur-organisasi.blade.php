@@ -42,7 +42,7 @@
         <div class="mt-6 border-t-2 pt-3">
             <h1 class="font-bold text-xl">Ubah Struktural</h1>
             <div class="my-4">
-                <form action="{{route('admin.profil-prodi.struktur.update-kaprodi')}}" method="post" class="flex flex-col md:flex-row space-x-2 items-center ">
+                <form action="{{route('admin.profile-prodi.struktur-org.update-kaprodi')}}" method="post" class="flex flex-col md:flex-row space-x-2 items-center ">
                     @csrf
                     <label for="kaprodi" class="font-semibold md:w-32">Kaprodi</label>
                     <select name="kaprodi" id=""
@@ -60,7 +60,7 @@
                 </form>
             </div>
             <div class="my-4">
-                <form action="{{route('admin.profil-prodi.struktur.update-sekprodi')}}" method="post" class="flex flex-col md:flex-row space-x-2 items-center ">
+                <form action="{{route('admin.profile-prodi.struktur-org.update-sekprodi')}}" method="post" class="flex flex-col md:flex-row space-x-2 items-center ">
                     @csrf
                     <label for="sekprodi" class="font-semibold md:w-32">Sekprodi</label>
                     <select name="sekprodi" id=""
@@ -88,7 +88,7 @@
         </div>
         <div class="mt-6">
             <h1 class="font-semibold text-lg mb-4">Ubah Bagan Struktur Organisasi</h1>
-            <form action="{{route('admin.profil-prodi.struktur.update-bagan')}}" method="post" enctype="multipart/form-data" class="flex flex-col md:flex-row md:space-x-4">
+            <form action="{{route('admin.profile-prodi.struktur-org.update-bagan')}}" method="post" enctype="multipart/form-data" class="flex flex-col md:flex-row md:space-x-4">
                 @csrf
                 <input type="file" name="gambar_bagan" required
                 class="m-0 text-sm bg-gray-100 rounded-md cursor-pointer file:px-2 file:border-none file:py-2 h-w-full focus:border-purple-500 dark:bg-dark-eval-2 dark:file:bg-dark-eval-0 dark:file:text-gray-300"

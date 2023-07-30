@@ -80,6 +80,7 @@
                         <input type="file" name="dokumen_sk"
                         class="block w-full mt-1 bg-gray-100 rounded-md cursor-pointer file:px-2 file:border-none file:py-2 h-w-full focus:border-purple-500 dark:bg-dark-eval-2 dark:file:bg-dark-eval-0 dark:file:text-gray-300"
                         >
+                        @if ($errors->has('dokumen_sk'))<span class="block w-full my-3 text-red-500">{{ $errors->first('dokumen_sk') }}</span> @endif
                     </label>
                 </div>
                 <x-button variant="primary"

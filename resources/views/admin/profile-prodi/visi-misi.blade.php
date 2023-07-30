@@ -4,7 +4,7 @@
             <h2 class="text-xl font-semibold leading-tight">
                 {{ __('Profil Teknik Informatika') }}
             </h2>
-            <x-button href="{{route('admin.profil-prodi.edit')}}" variant="primary"
+            <x-button href="{{route('admin.profile-prodi.visi-misi.edit')}}" variant="primary"
             class="justify-center max-w-xs gap-2">
                 <x-lucide-file-edit class="w-6 h-6" />
                 <span>Edit Visi Misi</span>

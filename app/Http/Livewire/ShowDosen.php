@@ -22,7 +22,7 @@ class ShowDosen extends LivewireDatatable
             Column::name('jabatan_akademik')->label('Jabatan Akademik'),
             Column::name('homebase'),
             Column::callback(['id'],function($id){
-                return view('admin.profil.dosen.table-actions', ['id'=> $id]);
+                return view('admin.dosen.table-actions', ['id'=> $id]);
             })->unsortable(),
         ];
     }

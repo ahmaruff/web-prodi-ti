@@ -21,7 +21,7 @@ class DosenController extends Controller
             'dosen' => $dosen
         ];
 
-        return view('admin.profil.dosen.index',$data);
+        return view('admin.dosen.index',$data);
     }
 
     /**
@@ -32,7 +32,7 @@ class DosenController extends Controller
         $data = [
 
         ];
-        return view('admin.profil.dosen.create',$data);
+        return view('admin.dosen.create',$data);
     }
 
     /**
@@ -70,7 +70,7 @@ class DosenController extends Controller
             'dosen' => $dosen,
         ];
 
-        return view('admin.profil.dosen.show', $data);
+        return view('admin.dosen.show', $data);
     }
 
     /**
@@ -81,7 +81,7 @@ class DosenController extends Controller
         $data = [
             'dosen' => $dosen,
         ];
-        return view('admin.profil.dosen.edit',$data);
+        return view('admin.dosen.edit',$data);
     }
 
     /**

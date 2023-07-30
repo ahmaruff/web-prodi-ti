@@ -19,7 +19,7 @@ class ProfilLulusanController extends Controller
             'lulusan' => $lulusan,
         ];
 
-        return view('admin.profil.lulusan.index', $data);
+        return view('admin.lulusan.index', $data);
     }
 
     /**
@@ -34,7 +34,7 @@ class ProfilLulusanController extends Controller
         $validatedData = $request->validate($rules);
         ProfilLulusan::create($validatedData);
 
-        return redirect(route('admin.profil.lulusan.index'))->with('success', 'profil lulusan telah dibuat');
+        return redirect(route('admin.profile-lulusan.index'))->with('success', 'profil lulusan telah dibuat');
     }
 
     /**
@@ -47,7 +47,7 @@ class ProfilLulusanController extends Controller
             'lulusan' => $lulusan,
         ];
 
-        return view('admin.profil.lulusan.edit', $data);
+        return view('admin.lulusan.edit', $data);
     }
 
     /**
@@ -62,7 +62,7 @@ class ProfilLulusanController extends Controller
         $validatedData = $request->validate($rules);
         ProfilLulusan::where('id', $id)->update($validatedData);
 
-        return redirect(route('admin.profil.lulusan.index'))->with('success', 'profil lulusan telah terupdate');
+        return redirect(route('admin.profile-lulusan.index'))->with('success', 'profil lulusan telah terupdate');
     }
 
     /**
@@ -71,6 +71,6 @@ class ProfilLulusanController extends Controller
     public function destroy(Request $request)
     {
         ProfilLulusan::where('id', $request->id)->delete();
-        return redirect(route('admin.profil.lulusan.index'))->with('success', 'profil lulusan berhasil dihapus');
+        return redirect(route('admin.profile-lulusan.index'))->with('success', 'profil lulusan berhasil dihapus');
     }
 }

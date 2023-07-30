@@ -23,7 +23,7 @@
                         </div>
                         @endif
                         <div class="px-4 py-2 bg-gray-100 rounded-none text-amber-500 dark:bg-dark-eval-2">
-                            <a href="{{ route('artikel.edit',[$artikel->id]) }}">Click to edit</a>
+                            <a href="{{ route('admin.artikel.edit',[$artikel->id]) }}">Click to edit</a>
                         </div>
                     </div>
                 </div>

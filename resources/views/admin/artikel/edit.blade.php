@@ -9,7 +9,7 @@
 
     <div class="p-6 overflow-hidden bg-white rounded-md shadow-md dark:bg-dark-eval-1">
         <div class="">
-            <form action="{{route('artikel.update', [$artikel->id])}}" method="post" enctype=multipart/form-data
+            <form action="{{route('admin.artikel.update', [$artikel->id])}}" method="post" enctype=multipart/form-data
             x-data="{content : {html : '{{$artikel->content_html}}', json : {{$artikel->content_json}}}}"
             >
                 @method('PUT')

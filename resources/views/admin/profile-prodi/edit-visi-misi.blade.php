@@ -4,7 +4,7 @@
             <h2 class="text-xl font-semibold leading-tight">
                 {{ __('Edit Visi Misi') }}
             </h2>
-            <x-button href="{{route('admin.profil-prodi.index')}}" variant="primary"
+            <x-button href="{{route('admin.profile-prodi.visi-misi.index')}}" variant="primary"
             class="justify-center max-w-xs gap-2">
                 <x-lucide-arrow-left-circle class="w-6 h-6" />
                 <span>Kembali</span>
@@ -14,7 +14,7 @@
 
     <div class="p-6 overflow-hidden bg-white rounded-md shadow-md dark:bg-dark-eval-1">
         <h1 class="text-xl font-semibold leading-tight">Visi</h1>
-        <form action="{{route('admin.profil-prodi.update-visi')}}" method="post">
+        <form action="{{route('admin.profile-prodi.visi-misi.update-visi')}}" method="post">
             @csrf
             <div>
                 <input type="hidden" name="id" value="{{$visi->id}}">
@@ -73,7 +73,7 @@
                         <span>Tambah</span>
                     </x-button>
                     <div>
-                        <form action="{{route('admin.profil-prodi.update-misi')}}" method="post">
+                        <form action="{{route('admin.profile-prodi.visi-misi.update-misi')}}" method="post">
                             @csrf
                             <input type="hidden" name="upsert" x-bind:value="JSON.stringify(rows)">
                             <input type="hidden" name="delete" x-bind:value="JSON.stringify(deleted_rows)">
@@ -131,7 +131,7 @@
                         <span>Tambah</span>
                     </x-button>
                     <div>
-                        <form action="{{route('admin.profil-prodi.update-tujuan')}}" method="post">
+                        <form action="{{route('admin.profile-prodi.visi-misi.update-tujuan')}}" method="post">
                             @csrf
                             <input type="hidden" name="upsert" x-bind:value="JSON.stringify(rows)">
                             <input type="hidden" name="delete" x-bind:value="JSON.stringify(deleted_rows)">
