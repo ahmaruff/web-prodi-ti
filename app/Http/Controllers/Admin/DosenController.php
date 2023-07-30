@@ -120,6 +120,8 @@ class DosenController extends Controller
     public function destroy(Dosen $dosen)
     {
         // dd($dosen);
+        //remove old file
+        Storage::disk('public')->delete('/uploads/dosen/'.$dosen->image);
         $dosen->delete();
         return redirect(route('admin.dosen.index'))->with('success', 'Data dosen telah dihapus');
     }
