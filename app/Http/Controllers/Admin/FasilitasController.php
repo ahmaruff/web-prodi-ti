@@ -118,6 +118,8 @@ class FasilitasController extends Controller
      */
     public function destroy(Fasilitas $fasilitas)
     {
+        // remove old file
+        Storage::disk('public')->delete('uploads/fasilitas/'.$fasilitas->image);
         $fasilitas->delete();
         return redirect(route('admin.fasilitas.index'))->with('success', 'fasilitas telah dihapus');
     }
