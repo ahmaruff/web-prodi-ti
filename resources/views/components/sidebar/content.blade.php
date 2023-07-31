@@ -14,6 +14,14 @@
         </x-slot>
     </x-sidebar.link>
 
+    <div
+        x-transition
+        x-show="isSidebarOpen || isSidebarHovered"
+        class="text-sm text-gray-500"
+    >
+        Konten
+    </div>
+
     <x-sidebar.link
     title="Artikel"
     href="{{route('admin.artikel.index')}}"
@@ -22,12 +30,20 @@
         Artikel
     </x-sidebar>
 
+    <x-sidebar.link
+    title="Pusat Unduhan"
+    href="{{route('admin.unduhan.index')}}"
+    :isActive="request()->routeIs('admin.unduhan.*')">
+        @slot('icon') <x-lucide-download-cloud class="flex-shrink-0 w-6 h-6"/>@endslot
+        Pusat Unduhan
+    </x-sidebar>
+
     <div
         x-transition
         x-show="isSidebarOpen || isSidebarHovered"
         class="text-sm text-gray-500"
     >
-        Profile
+        Profile Prodi
     </div>
 
     <x-sidebar.dropdown
@@ -79,12 +95,20 @@
         Fasilitas
     </x-sidebar>
 
+    <div
+        x-transition
+        x-show="isSidebarOpen || isSidebarHovered"
+        class="text-sm text-gray-500"
+    >
+        Kemahasiswaan
+    </div>
+
     <x-sidebar.link
-    title="Pusat Unduhan"
-    href="{{route('admin.unduhan.index')}}"
-    :isActive="request()->routeIs('admin.unduhan.*')">
-        @slot('icon') <x-lucide-download-cloud class="flex-shrink-0 w-6 h-6"/>@endslot
-        Pusat Unduhan
+    title="Prestasi"
+    href="{{route('admin.prestasi.index')}}"
+    :isActive="request()->routeIs('admin.prestasi.*')">
+        @slot('icon') <x-lucide-trophy class="flex-shrink-0 w-6 h-6"/>@endslot
+        Prestasi
     </x-sidebar>
 
     @php
