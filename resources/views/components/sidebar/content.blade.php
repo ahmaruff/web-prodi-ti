@@ -19,7 +19,7 @@
         x-show="isSidebarOpen || isSidebarHovered"
         class="text-sm text-gray-500"
     >
-        Konten
+        Pusat Informasi
     </div>
 
     <x-sidebar.link
@@ -109,6 +109,14 @@
     :isActive="request()->routeIs('admin.prestasi.*')">
         @slot('icon') <x-lucide-trophy class="flex-shrink-0 w-6 h-6"/>@endslot
         Prestasi
+    </x-sidebar>
+
+    <x-sidebar.link
+    title="Event"
+    href="{{route('admin.event-mahasiswa.index')}}"
+    :isActive="request()->routeIs('admin.event-mahasiswa.*')">
+        @slot('icon') <x-lucide-party-popper class="flex-shrink-0 w-6 h-6"/>@endslot
+        Event
     </x-sidebar>
 
     @php

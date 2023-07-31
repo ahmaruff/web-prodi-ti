@@ -51,6 +51,7 @@ Route::middleware('auth')->prefix('admin')->group(function () {
         Route::resource('unduhan', '\App\Http\Controllers\Admin\UnduhanController')->except(['show']);
         Route::resource('artikel','\App\Http\Controllers\Admin\ArtikelController');
         Route::resource('prestasi','\App\Http\Controllers\Admin\PrestasiController')->except(['show']);
+        Route::resource('event-mahasiswa','\App\Http\Controllers\Admin\EventMahasiswaController');
 
     });
 });
