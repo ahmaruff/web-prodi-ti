@@ -104,6 +104,14 @@
     </div>
 
     <x-sidebar.link
+    title="Himti Unsiq"
+    href="{{route('admin.himti.index')}}"
+    :isActive="request()->routeIs('admin.himti.*')">
+        @slot('icon') <x-lucide-component class="flex-shrink-0 w-6 h-6"/>@endslot
+        Himti Unsiq
+    </x-sidebar>
+
+    <x-sidebar.link
     title="Prestasi"
     href="{{route('admin.prestasi.index')}}"
     :isActive="request()->routeIs('admin.prestasi.*')">

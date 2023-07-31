@@ -53,6 +53,13 @@ Route::middleware('auth')->prefix('admin')->group(function () {
         Route::resource('prestasi','\App\Http\Controllers\Admin\PrestasiController')->except(['show']);
         Route::resource('event-mahasiswa','\App\Http\Controllers\Admin\EventMahasiswaController');
 
+        Route::get('himti', [\App\Http\Controllers\Admin\HimtiController::class, 'index'])->name('himti.index');
+        Route::get('himti/proker/create', [\App\Http\Controllers\Admin\HimtiController::class, 'createProker'])->name('himti.proker.create');
+        Route::post('himti/proker', [\App\Http\Controllers\Admin\HimtiController::class, 'storeProker'])->name('himti.proker.store');
+        Route::get('himti/proker/{id}/edit', [\App\Http\Controllers\Admin\HimtiController::class, 'editProker'])->name('himti.proker.edit');
+        Route::put('himti/proker/{id}', [\App\Http\Controllers\Admin\HimtiController::class, 'updateProker'])->name('himti.proker.update');
+        Route::delete('himti/proker/{id}', [\App\Http\Controllers\Admin\HimtiController::class, 'destroyProker'])->name('himti.proker.destroy');
+
     });
 });
 
