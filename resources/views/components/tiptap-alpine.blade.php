@@ -55,6 +55,13 @@
             <x-lucide-strikethrough class="w-5" />
         </button>
         <button class="px-2 py-1 border-2 border-gray-700 rounded-lg"
+        title="Link/URL"
+        @click.prevent="toggleLink()"
+        :class="{ 'bg-gray-700 text-gray-50' : isActive('link', updatedAt) }"
+        >
+            <x-lucide-link class="w-5" />
+        </button>
+        <button class="px-2 py-1 border-2 border-gray-700 rounded-lg"
         title="Blockquote"
         @click.prevent="toggleBlockquote()"
         :class="{ 'bg-gray-700 text-gray-50' : isActive('blockquote', updatedAt) }"

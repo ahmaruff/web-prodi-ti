@@ -21,6 +21,7 @@
     },
     "dependencies": {
         "@tiptap/core": "^2.0.4",
+        "@tiptap/extension-link": "^2.0.4",
         "@tiptap/starter-kit": "^2.0.4"
     }
 }

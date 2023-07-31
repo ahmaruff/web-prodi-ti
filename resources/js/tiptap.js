@@ -1,5 +1,6 @@
 import {Editor} from '@tiptap/core'
 import StarterKit from '@tiptap/starter-kit'
+import Link from '@tiptap/extension-link';
 
 export default (data_content) => {
     let editor;
@@ -23,6 +24,9 @@ export default (data_content) => {
         },
         toggleStrike() {
             editor.chain().toggleStrike().focus().run()
+        },
+        toggleLink(){
+            editor.chain().toggleLink().focus().run()
         },
         toggleCode() {
             editor.chain().toggleCode().focus().run()
@@ -50,6 +54,14 @@ export default (data_content) => {
                         heading: {
                             levels : [1,2,3,4,5]
                         }
+                    }),
+                    Link.configure({
+                        protocols: ['mailto'],
+                        HTMLAttributes: {
+                            // Change rel to different value
+                            // Allow search engines to follow links(remove nofollow)
+                            rel: 'noopener noreferrer',
+                          },
                     }),
                 ],
                 editorProps : {
