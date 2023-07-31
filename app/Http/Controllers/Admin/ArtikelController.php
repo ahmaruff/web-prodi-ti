@@ -8,7 +8,6 @@ use App\Http\Requests\UpdateArtikelRequest;
 use App\Models\Artikel;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
-use PhpOffice\PhpSpreadsheet\Calculation\Category;
 
 class ArtikelController extends Controller
 {
@@ -60,7 +59,7 @@ class ArtikelController extends Controller
 
             $artikel = Artikel::where('id', $id)->update(['image' => $filename]);
        }
-       return redirect(route('artikel.index'))->with('success', 'Artikel berhasil dibuat');
+       return redirect(route('admin.artikel.index'))->with('success', 'Artikel berhasil dibuat');
     }
 
     /**
@@ -133,7 +132,7 @@ class ArtikelController extends Controller
         }
 
         $artikel->save();
-        return redirect(route('artikel.show', $artikel->id));
+        return redirect(route('admin.artikel.show', $artikel->id));
     }
 
     /**
@@ -144,6 +143,6 @@ class ArtikelController extends Controller
         //remove old file
         Storage::disk('public')->delete('uploads/artikel/'.$artikel->image);
         $artikel->delete();
-        return redirect(route('artikel.index'))->with('success', 'Artikel berhasil dihapus');
+        return redirect(route('admin.artikel.index'))->with('success', 'Artikel berhasil dihapus');
     }
 }
