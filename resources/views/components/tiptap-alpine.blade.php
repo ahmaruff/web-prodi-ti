@@ -3,6 +3,20 @@
     {{-- wire:ignore {{$attributes->whereDoesntStartWith('wire:model')->merge(['class' => 'editor !w-full !max-w-full'])}} --}}
     >
     <div class="flex flex-wrap items-center py-2 space-x-1 space-y-1 border-b-2">
+        <button class="px-2 py-1 mt-1 border-2 border-gray-700 rounded-lg "
+        title="Undo"
+        @click.prevent="clickUndo()"
+        :class="{ 'bg-gray-700 text-gray-50' : isActive('undo', updatedAt) }"
+        >
+            <x-lucide-undo-2 class="w-5" />
+        </button>
+        <button class="px-2 py-1 mt-1 border-2 border-gray-700 rounded-lg "
+        title="Undo"
+        @click.prevent="clickRedo()"
+        :class="{ 'bg-gray-700 text-gray-50' : isActive('redo', updatedAt) }"
+        >
+        <x-lucide-redo-2 class="w-5" />
+        </button>
     <!-- hide H1 button
         <button class="px-2 py-1 mt-1 ml-1 border-2 border-gray-700 rounded-lg"
         title="Heading 1"
@@ -95,6 +109,13 @@
         :class="{ 'bg-gray-700 text-gray-50' : isActive('orderedList', updatedAt) }"
         >
             <x-lucide-list-ordered class="w-5" />
+        </button>
+        <button class="px-2 py-1 border-2 border-gray-700 rounded-lg"
+        title="Horizontal Rule"
+        @click.prevent="setHr()"
+        :class="{ 'bg-gray-700 text-gray-50' : isActive('horizontalRule', updatedAt) }"
+        >
+            <x-lucide-minus class="w-5" />
         </button>
       </div>
     <div x-ref="editor"></div>

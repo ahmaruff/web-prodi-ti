@@ -13,6 +13,12 @@ export default (data_content) => {
         isActive(type, opts = {}, updatedAt) {
             return editor.isActive(type, opts);
         },
+        clickUndo(){
+            editor.chain().focus().undo().run();
+        },
+        clickRedo(){
+            editor.chain().focus().redo().run();
+        },
         toggleBold() {
             editor.chain().toggleBold().focus().run();
         },
@@ -42,6 +48,9 @@ export default (data_content) => {
         },
         toggleOrderedList() {
             editor.chain().toggleOrderedList().focus().run()
+        },
+        setHr(){
+            editor.chain().setHorizontalRule().focus().run()
         },
         updatedAt : Date.now(),
         init(element) {
