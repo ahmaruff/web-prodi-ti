@@ -23,11 +23,11 @@
     </div>
 
     <x-sidebar.link
-    title="Artikel"
+    title="Info & Berita"
     href="{{route('admin.artikel.index')}}"
     :isActive="request()->routeIs('admin.artikel.*')">
         @slot('icon') <x-lucide-newspaper class="flex-shrink-0 w-6 h-6"/>@endslot
-        Artikel
+        Info & Berita
     </x-sidebar>
 
     <x-sidebar.link
