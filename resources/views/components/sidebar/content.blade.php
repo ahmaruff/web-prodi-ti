@@ -30,6 +30,46 @@
         Info & Berita
     </x-sidebar>
 
+    <x-sidebar.dropdown
+        title="Akademik"
+        :active="Str::startsWith(request()->route()->uri(), 'admin/akademik')"
+    >
+        <x-slot name="icon">
+            <x-lucide-book-open class="flex-shrink-0 w-6 h-6" aria-hidden="true" />
+        </x-slot>
+
+        <x-sidebar.sublink
+            title="Info Akademik"
+            href="{{ route('admin.akademik.info-akademik.index') }}"
+            :active="request()->routeIs('admin.akademik.info-akademik.index')"
+        />
+        <x-sidebar.sublink
+            title="Kurikulum"
+            href="{{ route('admin.akademik.kurikulum') }}"
+            :active="request()->routeIs('admin.akademik.kurikulum')"
+        />
+        <x-sidebar.sublink
+            title="Kalender Akademik"
+            href="{{ route('admin.akademik.kalender-akademik') }}"
+            :active="request()->routeIs('admin.akademik.kalender-akademik')"
+        />
+        <x-sidebar.sublink
+            title="Tugas Akhir"
+            href="{{ route('admin.akademik.tugas-akhir') }}"
+            :active="request()->routeIs('admin.akademik.tugas-akhir')"
+        />
+        <x-sidebar.sublink
+            title="Kerja Praktek"
+            href="{{ route('admin.akademik.kerja-praktek') }}"
+            :active="request()->routeIs('admin.akademik.kerja-praktek')"
+        />
+        <x-sidebar.sublink
+            title="Kampus Merdeka"
+            href="{{ route('admin.akademik.kampus-merdeka') }}"
+            :active="request()->routeIs('admin.akademik.kampus-merdeka')"
+        />
+    </x-sidebar.dropdown>
+
     <x-sidebar.link
     title="Pusat Unduhan"
     href="{{route('admin.unduhan.index')}}"

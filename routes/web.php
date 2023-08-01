@@ -60,6 +60,16 @@ Route::middleware('auth')->prefix('admin')->group(function () {
         Route::put('himti/proker/{id}', [\App\Http\Controllers\Admin\HimtiController::class, 'updateProker'])->name('himti.proker.update');
         Route::delete('himti/proker/{id}', [\App\Http\Controllers\Admin\HimtiController::class, 'destroyProker'])->name('himti.proker.destroy');
 
+        Route::prefix('akademik')->name('akademik.')->group(function() {
+            Route::resource('info-akademik', '\App\Http\Controllers\Admin\InfoAkademikController');
+
+            Route::get('/kurikulum', [\App\Http\Controllers\Admin\AkademikViewController::class, 'indexKurikulum'])->name('kurikulum');
+            Route::get('/tugas-akhir', [\App\Http\Controllers\Admin\AkademikViewController::class, 'indexTugasAkhir'])->name('tugas-akhir');
+            Route::get('/kerja-praktek', [\App\Http\Controllers\Admin\AkademikViewController::class, 'indexKerjaPraktek'])->name('kerja-praktek');
+            Route::get('/kampus-merdeka', [\App\Http\Controllers\Admin\AkademikViewController::class, 'indexKampusMerdeka'])->name('kampus-merdeka');
+            Route::get('/kalender-akademik', [\App\Http\Controllers\Admin\AkademikViewController::class, 'indexKalenderAkademik'])->name('kalender-akademik');
+        });
+
     });
 });
 
