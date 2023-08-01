@@ -4,10 +4,30 @@ import tiptap from './tiptap'
 import Alpine from 'alpinejs'
 import collapse from '@alpinejs/collapse'
 import PerfectScrollbar from 'perfect-scrollbar'
+import masonry from 'alpinejs-masonry'
+
 
 window.PerfectScrollbar = PerfectScrollbar
 
 document.addEventListener('alpine:init', () => {
+    Alpine.store('accordion', {
+    tab: 0
+    });
+    Alpine.data('accordion', (idx) => ({
+        init() {
+            this.idx = idx;
+        },
+        idx: -1,
+        handleClick() {
+            this.$store.accordion.tab = this.$store.accordion.tab === this.idx ? 0 : this.idx;
+        },
+        handleRotate() {
+            return this.$store.accordion.tab === this.idx ? '-rotate-180' : '';
+        },
+        handleToggle() {
+            return this.$store.accordion.tab === this.idx ? `max-height: ${this.$refs.tab.scrollHeight}px` : '';
+        }
+    }));
     Alpine.data('tiptap',tiptap);
     Alpine.data('mainState', () => {
         let lastScrollTop = 0
@@ -76,5 +96,6 @@ document.addEventListener('alpine:init', () => {
 
 
 window.Alpine = Alpine;
+Alpine.plugin(masonry)
 Alpine.plugin(collapse)
 Alpine.start()

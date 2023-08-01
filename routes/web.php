@@ -14,10 +14,7 @@ use App\Http\Controllers\ProfileController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
+Route::get('/', [\App\Http\Controllers\HomeController::class, 'index'])->name('public.home');
 
 Route::middleware('auth')->prefix('admin')->group(function () {
     Route::view('/', 'dashboard');
