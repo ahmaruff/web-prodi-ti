@@ -3,15 +3,15 @@
     <div class="flex flex-col items-center justify-around gap-8 md:flex-row">
         <div class=" md:w-1/4">
             <div class="flex gap-4">
-                <img src="/assets/images/logo/logo-unsiq.png" alt="" class="object-contain w-1/3 aspect-square">
-                <img src="/assets/images/logo/logo-fastikom.png" alt="" class="object-contain w-1/3 aspect-square">
-                <img src="/assets/images/logo/sm-logo-fullcolor.png" alt="" class="object-contain w-1/3 aspect-square">
+                <img src="/assets/images/logo/logo-unsiq.png" alt="" class="object-contain w-1/3 aspect-square hover:translate-x-1 hover:-translate-y-1 hover:transition-all hover:ease-in-out">
+                <img src="/assets/images/logo/logo-fastikom.png" alt="" class="object-contain w-1/3 aspect-square hover:translate-x-1 hover:-translate-y-1 hover:transition-all hover:ease-in-out">
+                <img src="/assets/images/logo/sm-logo-fullcolor.png" alt="" class="object-contain w-1/3 aspect-square hover:translate-x-1 hover:-translate-y-1 hover:transition-all hover:ease-in-out">
             </div>
         </div>
         <div class="md:w-3/4">
             <div class="flex flex-row justify-around gap-8 text-sm text-gray-500">
                 <div class="w-1/2">
-                    <h1 class="text-lg font-bold text-gray-900">Hubungi Kami</h1>
+                    <h1 class="text-lg font-bold text-gray-900 hover:underline">Hubungi Kami</h1>
                     <p class="my-1 font-semibold">
                     Program Studi Teknik Informatika <br>
                     Fakultas Teknik dan Ilmu Komputer UNSIQ
@@ -26,9 +26,10 @@
                     <a href="mailto:info@fastikom-unsiq.ac.id" class="block my-2 hover:underline hover:text-gray-800">info@fastikom-unsiq.ac.id</a>
                 </div>
                 <div class="w-1/2">
-                    <h1 class="text-lg font-bold text-gray-900">Pranala Luar</h1>
+                    <h1 class="text-lg font-bold text-gray-900 hover:underline">Pranala Luar</h1>
                     <a href="https://fastikom-unsiq.ac.id" class="block my-2 hover:underline hover:text-gray-800">Fakultas Teknik dan Ilmu Komputer</a>
                     <a href="https://unsiq.ac.id" class="block my-2 hover:underline hover:text-gray-800">Universitas Sains Al-Qur'an</a>
+                    <a href="https://mhs.unsiq.ac.id" class="block my-2 hover:underline hover:text-gray-800">Sistem Akademik</a>
                     <a href="https://pmb.unsiq.ac.id" class="block my-2 hover:underline hover:text-gray-800">Penerimaan Mahasiswa Baru</a>
                     <a href="https://himti.fastikom-unsiq.ac.id" class="block my-2 hover:underline hover:text-gray-800">Himpunan Mahasiswa Teknik Informatika</a>
                 </div>

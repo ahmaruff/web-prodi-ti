@@ -17,7 +17,7 @@
                         NIDN: {{ $item->nidn }}
                     </p>
                     <p class="text-center text-sm text-gray-500 capitalize hover:underline">
-                        {{$item->jabatan_struktural}}
+                        {{$item->jabatan_akademik}}
                     </p>
                 </div>
             </div>
