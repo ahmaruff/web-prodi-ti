@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Akreditasi;
 use App\Models\Artikel;
 use App\Models\Dosen;
 use App\Models\InfoAkademik;
@@ -82,5 +83,24 @@ class HomeController extends Controller
         ];
 
         return view('public.info-akademik', $data);
+    }
+
+    public function akreditasi() {
+
+        $akreditasi = Akreditasi::get([
+        'id',
+        'prodi',
+        'no_sk',
+        'tgl_terbit',
+        'tgl_kadaluarsa',
+        'peringkat',
+        'status',
+        'dokumen_sk', ]);
+
+        $data = [
+            'akreditasi' => $akreditasi->toArray()
+        ];
+
+        return view('public.layouts.akreditasi', $data);
     }
 }

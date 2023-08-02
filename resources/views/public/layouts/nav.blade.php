@@ -96,7 +96,7 @@
                 <div x-show="open" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 transform scale-90" x-transition:enter-end="opacity-100 transform scale-100" x-transition:leave="transition ease-in duration-300" x-transition:leave-start="opacity-100 transform scale-100" x-transition:leave-end="opacity-0 transform scale-90" class="absolute right-0 py-1 text-gray-500 bg-white rounded-lg shadow-xl min-w-max">
                     <a href="{{route('public.visi-misi')}}" class="block px-4 py-1 hover:text-gray-900 hover:bg-gray-100">Visi Misi</a>
                     <a href="{{route('public.struktur-org')}}" class="block px-4 py-1 hover:text-gray-900 hover:bg-gray-100">Struktur Organisasi</a>
-                    <a href="#" class="block px-4 py-1 hover:text-gray-900 hover:bg-gray-100">Lorem ipsum dolor sit amet.</a>
+                    <a href="{{route('public.akreditasi')}}" class="block px-4 py-1 hover:text-gray-900 hover:bg-gray-100">Akreditasi</a>
                 </div>
                 <!-- End Dropdown Menu -->
             </div>
