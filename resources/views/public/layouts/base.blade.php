@@ -47,5 +47,6 @@
             2023 &copy; Teknik Informatika UNSIQ. <a href="mailto:ahmadmaruf2701@gmail.com" class="hover:underline">By Ahmad Ma'ruf</a>
         </div>
     </div>
+    @livewireScripts
 </body>
 </html>
