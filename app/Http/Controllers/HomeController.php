@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Artikel;
 use App\Models\Dosen;
+use App\Models\InfoAkademik;
 use App\Models\Profil\Misi;
 use App\Models\Profil\ProfilLulusan;
 use App\Models\Profil\Tujuan;
@@ -50,5 +51,36 @@ class HomeController extends Controller
         ];
 
         return view('public.struktur-org', $data);
+    }
+
+    public function infoAkademik(String $link) {
+        /**
+         * ASUMSI:
+         * ID 1 = KURIKULUM
+         * ID 2 = TUGAS AKHIR
+         * ID 3 = KERJA PRAKTEK
+         * ID 4 = MBKM
+         * ID 5 = KALENDER AKADEMIK
+        */
+
+        if($link == 'kurikulum'){
+            $id = 1;
+        }else if($link == 'tugas-akhir'){
+            $id = 2;
+        }else if($link == 'kerja-praktek'){
+            $id = 3;
+        }else if($link == 'kampus-merdeka') {
+            $id = 4;
+        } else if($link == 'kalender-akademik') {
+            $id = 5;
+        }
+
+        $info = InfoAkademik::where('id', $id)->get(['judul', 'dokumen', 'content_html'])->first();
+
+        $data = [
+            'info' => $info->toArray(),
+        ];
+
+        return view('public.info-akademik', $data);
     }
 }

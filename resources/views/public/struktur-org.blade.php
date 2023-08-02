@@ -18,6 +18,7 @@
         </div>
     </div>
 </div>
+<div class="pt-24" id="kaprodi"></div>
 <div class="flex flex-col w-screen min-h-screen">
     <div class="flex flex-col items-center justify-center w-screen gap-6 md:flex-row">
         <div class="md:w-1/3">

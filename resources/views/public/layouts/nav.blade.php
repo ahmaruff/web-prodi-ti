@@ -101,6 +101,30 @@
                 <!-- End Dropdown Menu -->
             </div>
             <!-- End Dropdown 1 -->
+            <!-- Dropdown 2 -->
+            <div x-data="{ open: false }" @mouseleave="open = false" class="relative inline-block" :class="{'text-gray-900': open, 'text-gray-600': !open }">
+                <!-- Dropdown Toggle Button -->
+                <button @mouseover="open = true" class="flex items-center p-2 rounded-md">
+                    <span class="mr-4">Akademik</span>
+                    <span :class="open = ! open ? '': '-rotate-180'" class="transition-transform duration-500 transform">
+                        <svg class="w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                            <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                        </svg>
+                    </span>
+                </button>
+            <!-- End Dropdown Toggle Button -->
+
+                <!-- Dropdown Menu -->
+                <div x-show="open" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 transform scale-90" x-transition:enter-end="opacity-100 transform scale-100" x-transition:leave="transition ease-in duration-300" x-transition:leave-start="opacity-100 transform scale-100" x-transition:leave-end="opacity-0 transform scale-90" class="absolute right-0 py-1 text-gray-500 bg-white rounded-lg shadow-xl min-w-max">
+                    <a href="{{route('public.info-akademik', 'kalender-akademik')}}" class="block px-4 py-1 hover:text-gray-900 hover:bg-gray-100">Kalender Akademik</a>
+                    <a href="{{route('public.info-akademik', 'kurikulum')}}" class="block px-4 py-1 hover:text-gray-900 hover:bg-gray-100">Kurikulum</a>
+                    <a href="{{route('public.info-akademik', 'tugas-akhir')}}" class="block px-4 py-1 hover:text-gray-900 hover:bg-gray-100">Tugas Akhir</a>
+                    <a href="{{route('public.info-akademik', 'kerja-praktek')}}" class="block px-4 py-1 hover:text-gray-900 hover:bg-gray-100">Kerja Praktek</a>
+                    <a href="{{route('public.info-akademik', 'kampus-merdeka')}}" class="block px-4 py-1 hover:text-gray-900 hover:bg-gray-100">Kampus Merdeka</a>
+                </div>
+                <!-- End Dropdown Menu -->
+            </div>
+            <!-- End Dropdown 2 -->
         </div>
     </div>
     {{-- <div class="hidden w-full lg:flex lg:items-center lg:w-auto">

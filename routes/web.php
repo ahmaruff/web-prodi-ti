@@ -17,6 +17,7 @@ use App\Http\Controllers\ProfileController;
 Route::get('/', [\App\Http\Controllers\HomeController::class, 'index'])->name('public.home');
 Route::get('/visi-misi', [\App\Http\Controllers\HomeController::class, 'visiMisi'])->name('public.visi-misi');
 Route::get('/struktur-organisasi', [\App\Http\Controllers\HomeController::class, 'strukturOrg'])->name('public.struktur-org');
+Route::get('/akademik/{link}', [\App\Http\Controllers\HomeController::class, 'infoAkademik'])->name('public.info-akademik');
 
 Route::middleware('auth')->prefix('admin')->group(function () {
     Route::view('/', 'dashboard');
