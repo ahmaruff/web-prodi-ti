@@ -68,8 +68,8 @@
     <div class="hidden w-full lg:flex lg:items-center lg:w-auto">
         <div class="items-center justify-center flex-1 pt-6 text-lg text-gray-500 lg:pt-0 list-reset lg:flex">
             <div class="mr-3">
-                <a href="#" class="inline-block px-4 py-2 text-gray-600 no-underline hover:text-gray-900">
-                    Link
+                <a href="/" class="inline-block px-4 py-2 text-gray-600 no-underline hover:text-gray-900">
+                    Home
                 </a>
             </div>
 
@@ -83,7 +83,7 @@
             <div x-data="{ open: false }" @mouseleave="open = false" class="relative inline-block" :class="{'text-gray-900': open, 'text-gray-600': !open }">
                 <!-- Dropdown Toggle Button -->
                 <button @mouseover="open = true" class="flex items-center p-2 rounded-md">
-                    <span class="mr-4">Hover Dropdown</span>
+                    <span class="mr-4">Profil</span>
                     <span :class="open = ! open ? '': '-rotate-180'" class="transition-transform duration-500 transform">
                         <svg class="w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
                             <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
@@ -94,8 +94,8 @@
 
                 <!-- Dropdown Menu -->
                 <div x-show="open" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 transform scale-90" x-transition:enter-end="opacity-100 transform scale-100" x-transition:leave="transition ease-in duration-300" x-transition:leave-start="opacity-100 transform scale-100" x-transition:leave-end="opacity-0 transform scale-90" class="absolute right-0 py-1 text-gray-500 bg-white rounded-lg shadow-xl min-w-max">
-                    <a href="#" class="block px-4 py-1 hover:text-gray-900 hover:bg-gray-100">Lorem, ipsum.</a>
-                    <a href="#" class="block px-4 py-1 hover:text-gray-900 hover:bg-gray-100">Lorem, ipsum dolor.</a>
+                    <a href="{{route('public.visi-misi')}}" class="block px-4 py-1 hover:text-gray-900 hover:bg-gray-100">Visi Misi</a>
+                    <a href="{{route('public.struktur-org')}}" class="block px-4 py-1 hover:text-gray-900 hover:bg-gray-100">Struktur Organisasi</a>
                     <a href="#" class="block px-4 py-1 hover:text-gray-900 hover:bg-gray-100">Lorem ipsum dolor sit amet.</a>
                 </div>
                 <!-- End Dropdown Menu -->
