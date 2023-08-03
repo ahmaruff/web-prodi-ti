@@ -31,12 +31,33 @@
 
     <!-- Toggle menu -->
     <div x-ref="tab" :style="handleToggle()" class="relative w-full overflow-hidden transition-all duration-700 lg:hidden max-h-0">
-        <div class="flex flex-col my-3 space-y-2 text-lg text-gray-600 hover:font-b">
-            <a href="#" class="hover:text-gray-900"><span>Link</span></a>
+        <div class="flex flex-col my-3 space-y-2 overflow-y-scroll text-lg text-gray-600 hover:font-b">
+            <a href="{{route('public.home')}}" class="hover:text-gray-900"><span>Home</span></a>
             <hr>
-            <a href="#" class="hover:text-gray-900"><span>Link</span></a>
+            <a href="{{route('public.berita.index')}}" class="hover:text-gray-900"><span>Berita</span></a>
             <hr>
-            <a href="#" class="hover:text-gray-900"><span>Link</span></a>
+            {{-- <a href="{{route('public.visi-misi')}}" class="hover:text-gray-900"><span>Visi Misi</span></a>
+            <hr> --}}
+            <a href="{{route('public.struktur-org')}}" class="hover:text-gray-900"><span>Struktur Organisasi</span></a>
+            <hr>
+            {{-- <a href="{{route('public.fasilitas')}}" class="hover:text-gray-900"><span>Fasilitas</span></a>
+            <hr> --}}
+            {{-- <a href="{{route('public.info-akademik', 'kurikulum')}}" class="hover:text-gray-900"><span>Kurikulum</span></a>
+            <hr> --}}
+            {{-- <a href="{{route('public.info-akademik', 'tugas-akhir')}}" class="hover:text-gray-900"><span>Tugas Akhir</span></a>
+            <hr> --}}
+            {{-- <a href="{{route('public.info-akademik', 'kerja-praktek')}}" class="hover:text-gray-900"><span>Kerja Praktek</span></a>
+            <hr> --}}
+            <a href="{{route('public.info-akademik', 'kalender-akademik')}}" class="hover:text-gray-900"><span>Kalender Akademik</span></a>
+            <hr>
+            {{-- <a href="{{route('public.himti')}}" class="hover:text-gray-900"><span>Himti UNSIQ</span></a>
+            <hr> --}}
+            <a href="{{route('public.info-akademik', 'kurikulum')}}" class="hover:text-gray-900"><span>Event</span></a>
+            <hr>
+            <a href="{{route('public.info-akademik', 'kurikulum')}}" class="hover:text-gray-900"><span>Prestasi</span></a>
+            <hr>
+            <a href="{{route('public.pusat-unduhan')}}" class="hover:text-gray-900"><span>Pusat Unduhan</span></a>
+
         </div>
         {{-- <div class="px-5 py-6 space-y-6">
             <div class="grid grid-cols-2 gap-y-4 gap-x-8">
@@ -144,11 +165,9 @@
 
                 <!-- Dropdown Menu -->
                 <div x-show="open" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 transform scale-90" x-transition:enter-end="opacity-100 transform scale-100" x-transition:leave="transition ease-in duration-300" x-transition:leave-start="opacity-100 transform scale-100" x-transition:leave-end="opacity-0 transform scale-90" class="absolute right-0 py-1 text-gray-500 bg-white rounded-lg shadow-xl min-w-max">
-                    <a href="{{route('public.info-akademik', 'kalender-akademik')}}" class="block px-4 py-1 hover:text-gray-900 hover:bg-gray-100">Kalender Akademik</a>
-                    <a href="{{route('public.info-akademik', 'kurikulum')}}" class="block px-4 py-1 hover:text-gray-900 hover:bg-gray-100">Kurikulum</a>
-                    <a href="{{route('public.info-akademik', 'tugas-akhir')}}" class="block px-4 py-1 hover:text-gray-900 hover:bg-gray-100">Tugas Akhir</a>
-                    <a href="{{route('public.info-akademik', 'kerja-praktek')}}" class="block px-4 py-1 hover:text-gray-900 hover:bg-gray-100">Kerja Praktek</a>
-                    <a href="{{route('public.info-akademik', 'kampus-merdeka')}}" class="block px-4 py-1 hover:text-gray-900 hover:bg-gray-100">Kampus Merdeka</a>
+                    <a href="{{route('public.himti')}}" class="block px-4 py-1 hover:text-gray-900 hover:bg-gray-100">Himti UNSIQ</a>
+                    <a href="{{route('public.himti')}}" class="block px-4 py-1 hover:text-gray-900 hover:bg-gray-100">Prestasi Mahasiswa</a>
+                    <a href="{{route('public.himti')}}" class="block px-4 py-1 hover:text-gray-900 hover:bg-gray-100">Event Mahasiswa</a>
                 </div>
                 <!-- End Dropdown Menu -->
             </div>

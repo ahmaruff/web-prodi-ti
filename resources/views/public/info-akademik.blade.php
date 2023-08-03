@@ -4,16 +4,16 @@
 @endsection
 
 @section('content')
-<div class="flex flex-col justify-center w-full min-h-screen">
-    <h1 class="text-4xl font-black md:text-6xl text-center w-full py-24 md:py-32">
+<div class="flex flex-col justify-center min-h-screen">
+    <h1 class="py-24 text-4xl font-black text-center break-words md:text-6xl md:py-32">
         {{ $info['judul'] }}
     </h1>
-    <div class="w-full bg-white min-h">
-        <div class="w-full mx-16 md:mx-24 prose my-16 h-full">
+    <div class="bg-white min-h">
+        <div class="h-full mx-4 my-16 prose md:mx-24">
             {!! $info['content_html'] !!}
         </div>
     </div>
-    <div class="mx-16">
+    <div class="mx-4 md:mx-16">
         <canvas id="the-canvas" class="w-full border-2" data-link="{{url('/storage/uploads/akademik/'.$info['dokumen'])}}"></canvas>
     </div>
 </div>

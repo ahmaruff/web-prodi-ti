@@ -44,9 +44,9 @@
 
             @include('public.layouts.footer')
         </div>
-        <div class="py-8 font-sans text-sm text-center text-gray-400">
+        <p class="py-8 font-sans text-sm text-center text-gray-400 break-words">
             2023 &copy; Teknik Informatika UNSIQ. <a href="mailto:ahmadmaruf2701@gmail.com" class="hover:underline">By Ahmad Ma'ruf</a>
-        </div>
+        </p>
     </div>
     @livewireScripts
 </body>
