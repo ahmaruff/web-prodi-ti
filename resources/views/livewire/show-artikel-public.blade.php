@@ -13,12 +13,12 @@
                     <option value="kemahasiswaan">Kemahasiswaan</option>
                 </select>
             </div>
-            <input type="text" wire:model='search' placeholder="Cari Artikel" class="block px-4 py-2 bg-white border-purple-500 rounded rounded-lg focus:shadow-lg focus:border-2 ring-1">
+            <input type="text" wire:model='search' placeholder="Cari Artikel" class="block px-4 py-2 bg-white border-purple-500 rounded-lg focus:shadow-lg focus:border-2 ring-1">
         </div>
     </div>
     <div x-data x-masonry class="grid grid-cols-2 gap-8 mx-16 my-8 md:grid-cols-4 md:mx-24">
         @foreach ($artikel as $item)
-        <div class="w-full bg-gray-100 shadow-md h-fit rounded-xl hover:scale-105 hover:ease-in-out hover:transition-all h-96">
+        <div class="w-full bg-gray-100 shadow-md h-fit rounded-xl hover:scale-105 hover:ease-in-out hover:transition-all">
             <div class="hidden md:block md:w-full md:h-1/2">
                 @if (isset($item['image']))
                 <img src="{{url('/storage/uploads/artikel/'.$item['image'])}}" alt="" class="object-cover w-full h-full rounded-t-xl">
