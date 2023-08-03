@@ -119,7 +119,11 @@ Teknik Informatika UNSIQ
         @foreach ($berita_terbaru as $berita)
             <div class="w-full bg-white shadow-lg md:w-1/4 rounded-xl h-96 hover:scale-105 hover:ease-in-out hover:transition-all">
                 <div class="w-full h-1/2">
+                @if (isset($berita['image']))
                     <img src="{{url('/storage/uploads/artikel/'.$berita['image'])}}" alt="" class="object-cover w-full h-full rounded-t-xl">
+                @else
+                    <img src="/assets/images/logo/sm-fullcolor-bg-light.png" alt="" class="self-center object-scale-down w-3/4 h-full mx-auto bg-white rounded-t-xl">
+                @endif
                 </div>
                 <div class="h-1/2">
                     <div class="px-4 py-1 mt-1 ml-auto text-sm text-right text-white rounded-l-full bg-cyan-600 w-fit">
@@ -138,7 +142,7 @@ Teknik Informatika UNSIQ
         @endforeach
     </div>
     <div class="w-full mx-auto mt-8">
-        <a href="#" class="block px-8 py-4 mx-auto my-8 font-semibold text-center text-white rounded-full shadow-lg w-fit bg-gradient-to-r from-purple-600 to-cyan-500 hover:translate-x-2 hover:shadow-2xl hover:ease-linear hover:transition">
+        <a href="{{route('public.berita.index')}}" class="block px-8 py-4 mx-auto my-8 font-semibold text-center text-white rounded-full shadow-lg w-fit bg-gradient-to-r from-purple-600 to-cyan-500 hover:translate-x-2 hover:shadow-2xl hover:ease-linear hover:transition">
         Cari Berita Lainnya <x-lucide-arrow-right class="inline-block w-4 h-4" />
         </a>
     </div>
