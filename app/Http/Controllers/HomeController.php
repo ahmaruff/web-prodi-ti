@@ -113,4 +113,10 @@ class HomeController extends Controller
 
         return view('public.fasilitas', $data);
     }
+
+    public function pusatUnduhan(){
+        $data = [];
+
+        return view('public.pusat-unduhan', $data);
+    }
 }

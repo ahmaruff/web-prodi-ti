@@ -20,6 +20,7 @@ Route::get('/struktur-organisasi', [\App\Http\Controllers\HomeController::class,
 Route::get('/akademik/{link}', [\App\Http\Controllers\HomeController::class, 'infoAkademik'])->name('public.info-akademik');
 Route::get('/akreditasi', [\App\Http\Controllers\HomeController::class, 'akreditasi'])->name('public.akreditasi');
 Route::get('/fasilitas', [\App\Http\Controllers\HomeController::class, 'fasilitas'])->name('public.fasilitas');
+Route::get('/pusat-unduhan', [\App\Http\Controllers\HomeController::class, 'pusatUnduhan'])->name('public.pusat-unduhan');
 
 Route::middleware('auth')->prefix('admin')->group(function () {
     Route::view('/', 'dashboard');
