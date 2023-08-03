@@ -11,6 +11,7 @@ use App\Models\Profil\Misi;
 use App\Models\Profil\ProfilLulusan;
 use App\Models\Profil\Tujuan;
 use App\Models\Profil\Visi;
+use App\Models\ProgramKerja;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -118,5 +119,15 @@ class HomeController extends Controller
         $data = [];
 
         return view('public.pusat-unduhan', $data);
+    }
+
+    public function himti(){
+        $program_kerja = ProgramKerja::get(['judul', 'deskripsi']);
+
+        $data = [
+            'program_kerja' => $program_kerja
+        ];
+
+        return view('public.himti', $data);
     }
 }

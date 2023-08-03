@@ -21,6 +21,7 @@ Route::get('/akademik/{link}', [\App\Http\Controllers\HomeController::class, 'in
 Route::get('/akreditasi', [\App\Http\Controllers\HomeController::class, 'akreditasi'])->name('public.akreditasi');
 Route::get('/fasilitas', [\App\Http\Controllers\HomeController::class, 'fasilitas'])->name('public.fasilitas');
 Route::get('/pusat-unduhan', [\App\Http\Controllers\HomeController::class, 'pusatUnduhan'])->name('public.pusat-unduhan');
+Route::get('himti-unsiq', [\App\Http\Controllers\HomeController::class, 'himti'])->name('public.himti');
 
 // BERITA
 Route::get('/berita', [\App\Http\Controllers\BeritaController::class, 'index'])->name('public.berita.index');
