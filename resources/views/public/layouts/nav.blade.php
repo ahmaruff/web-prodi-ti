@@ -97,6 +97,7 @@
                     <a href="{{route('public.visi-misi')}}" class="block px-4 py-1 hover:text-gray-900 hover:bg-gray-100">Visi Misi</a>
                     <a href="{{route('public.struktur-org')}}" class="block px-4 py-1 hover:text-gray-900 hover:bg-gray-100">Struktur Organisasi</a>
                     <a href="{{route('public.akreditasi')}}" class="block px-4 py-1 hover:text-gray-900 hover:bg-gray-100">Akreditasi</a>
+                    <a href="{{route('public.fasilitas')}}" class="block px-4 py-1 hover:text-gray-900 hover:bg-gray-100">Fasilitas</a>
                 </div>
                 <!-- End Dropdown Menu -->
             </div>

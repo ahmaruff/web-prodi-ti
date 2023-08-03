@@ -19,6 +19,7 @@ Route::get('/visi-misi', [\App\Http\Controllers\HomeController::class, 'visiMisi
 Route::get('/struktur-organisasi', [\App\Http\Controllers\HomeController::class, 'strukturOrg'])->name('public.struktur-org');
 Route::get('/akademik/{link}', [\App\Http\Controllers\HomeController::class, 'infoAkademik'])->name('public.info-akademik');
 Route::get('/akreditasi', [\App\Http\Controllers\HomeController::class, 'akreditasi'])->name('public.akreditasi');
+Route::get('/fasilitas', [\App\Http\Controllers\HomeController::class, 'fasilitas'])->name('public.fasilitas');
 
 Route::middleware('auth')->prefix('admin')->group(function () {
     Route::view('/', 'dashboard');

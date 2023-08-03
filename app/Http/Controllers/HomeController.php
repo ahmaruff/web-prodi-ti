@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Akreditasi;
 use App\Models\Artikel;
 use App\Models\Dosen;
+use App\Models\Fasilitas;
 use App\Models\InfoAkademik;
 use App\Models\Profil\Misi;
 use App\Models\Profil\ProfilLulusan;
@@ -101,6 +102,15 @@ class HomeController extends Controller
             'akreditasi' => $akreditasi->toArray()
         ];
 
-        return view('public.layouts.akreditasi', $data);
+        return view('public.akreditasi', $data);
+    }
+
+    public function fasilitas() {
+        $fasilitas = Fasilitas::get(['nama', 'deskripsi', 'image']);
+        $data = [
+            'fasilitas' => $fasilitas->toArray()
+        ];
+
+        return view('public.fasilitas', $data);
     }
 }
