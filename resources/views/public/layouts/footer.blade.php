@@ -28,6 +28,7 @@
                 <div class="w-1/2">
                     <h1 class="text-lg font-bold text-gray-900 hover:underline">Pranala Luar</h1>
                     <a href="https://fastikom-unsiq.ac.id" class="block my-2 hover:underline hover:text-gray-800">Fakultas Teknik dan Ilmu Komputer</a>
+                    <a href="https://ojs.unsiq.ac.id/index.php/device/index" class="block my-2 hover:underline hover:text-gray-800">Jurnal Ilmiah DEVICE</a>
                     <a href="https://unsiq.ac.id" class="block my-2 hover:underline hover:text-gray-800">Universitas Sains Al-Qur'an</a>
                     <a href="https://mhs.unsiq.ac.id" class="block my-2 hover:underline hover:text-gray-800">Sistem Akademik</a>
                     <a href="https://pmb.unsiq.ac.id" class="block my-2 hover:underline hover:text-gray-800">Penerimaan Mahasiswa Baru</a>
