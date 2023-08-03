@@ -98,7 +98,7 @@
             <!-- End Dropdown 1 -->
 
             <div class="mr-3">
-                <a href="#" class="inline-block px-4 py-2 text-gray-600 no-underline hover:text-gray-900">
+                <a href="{{route('public.berita.index')}}" class="inline-block px-4 py-2 text-gray-600 no-underline hover:text-gray-900">
                     Berita
                 </a>
             </div>

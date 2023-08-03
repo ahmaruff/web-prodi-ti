@@ -22,6 +22,11 @@ Route::get('/akreditasi', [\App\Http\Controllers\HomeController::class, 'akredit
 Route::get('/fasilitas', [\App\Http\Controllers\HomeController::class, 'fasilitas'])->name('public.fasilitas');
 Route::get('/pusat-unduhan', [\App\Http\Controllers\HomeController::class, 'pusatUnduhan'])->name('public.pusat-unduhan');
 
+// BERITA
+Route::get('/berita', [\App\Http\Controllers\BeritaController::class, 'index'])->name('public.berita.index');
+Route::get('/berita/{category}/{id}/{slug}', [\App\Http\Controllers\BeritaController::class, 'show'])->name('public.berita.show');
+
+
 Route::middleware('auth')->prefix('admin')->group(function () {
     Route::view('/', 'dashboard');
     Route::view('/dashboard', 'dashboard')->name('dashboard');

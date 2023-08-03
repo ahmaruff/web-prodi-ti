@@ -95,7 +95,7 @@ Teknik Informatika UNSIQ
                     >
                         {{$lulusan['profil_lulusan']}}
                     </button>
-                
+
                     <div x-cloak x-show="activeAccordion === {{$lulusan['id']}}" x-collapse>
                         <div class="mb-3 font-light content">
                         {{$lulusan['deskripsi']}}
@@ -130,7 +130,7 @@ Teknik Informatika UNSIQ
                             {{$berita['title']}}
                         </h1>
                     </div>
-                    <a href="#" class="block px-4 py-1 text-sm font-semibold text-center text-white bg-purple-700 rounded-r-full shadow-md w-fit hover:bg-purple-800 hover:-translate-y-1 hover:shadow-2xl hover:ease-linear hover:transition">
+                    <a href="{{route('public.berita.show', [$berita['category'], $berita['id'], $berita['slug']])}}" class="block px-4 py-1 text-sm font-semibold text-center text-white bg-purple-700 rounded-r-full shadow-md w-fit hover:bg-purple-800 hover:-translate-y-1 hover:shadow-2xl hover:ease-linear hover:transition">
                         Baca <x-lucide-arrow-right class="inline-block w-4 h-4" />
                     </a>
                 </div>
