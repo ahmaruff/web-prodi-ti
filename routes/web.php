@@ -22,6 +22,7 @@ Route::get('/akreditasi', [\App\Http\Controllers\HomeController::class, 'akredit
 Route::get('/fasilitas', [\App\Http\Controllers\HomeController::class, 'fasilitas'])->name('public.fasilitas');
 Route::get('/pusat-unduhan', [\App\Http\Controllers\HomeController::class, 'pusatUnduhan'])->name('public.pusat-unduhan');
 Route::get('himti-unsiq', [\App\Http\Controllers\HomeController::class, 'himti'])->name('public.himti');
+Route::get('prestasi', [\App\Http\Controllers\HomeController::class, 'prestasi'])->name('public.prestasi');
 
 // BERITA
 Route::get('/berita', [\App\Http\Controllers\BeritaController::class, 'index'])->name('public.berita.index');

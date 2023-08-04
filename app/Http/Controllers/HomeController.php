@@ -7,6 +7,7 @@ use App\Models\Artikel;
 use App\Models\Dosen;
 use App\Models\Fasilitas;
 use App\Models\InfoAkademik;
+use App\Models\Prestasi;
 use App\Models\Profil\Misi;
 use App\Models\Profil\ProfilLulusan;
 use App\Models\Profil\Tujuan;
@@ -129,5 +130,9 @@ class HomeController extends Controller
         ];
 
         return view('public.himti', $data);
+    }
+
+    public function prestasi(){
+        return view('public.prestasi');
     }
 }
