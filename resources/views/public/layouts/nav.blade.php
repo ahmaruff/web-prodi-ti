@@ -167,7 +167,7 @@
                 <div x-show="open" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 transform scale-90" x-transition:enter-end="opacity-100 transform scale-100" x-transition:leave="transition ease-in duration-300" x-transition:leave-start="opacity-100 transform scale-100" x-transition:leave-end="opacity-0 transform scale-90" class="absolute right-0 py-1 text-gray-500 bg-white rounded-lg shadow-xl min-w-max">
                     <a href="{{route('public.himti')}}" class="block px-4 py-1 hover:text-gray-900 hover:bg-gray-100">Himti UNSIQ</a>
                     <a href="{{route('public.prestasi')}}" class="block px-4 py-1 hover:text-gray-900 hover:bg-gray-100">Prestasi Mahasiswa</a>
-                    <a href="{{route('public.himti')}}" class="block px-4 py-1 hover:text-gray-900 hover:bg-gray-100">Event Mahasiswa</a>
+                    <a href="{{route('public.event.index')}}" class="block px-4 py-1 hover:text-gray-900 hover:bg-gray-100">Event Mahasiswa</a>
                 </div>
                 <!-- End Dropdown Menu -->
             </div>

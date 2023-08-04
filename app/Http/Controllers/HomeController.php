@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Akreditasi;
 use App\Models\Artikel;
 use App\Models\Dosen;
+use App\Models\EventMahasiswa;
 use App\Models\Fasilitas;
 use App\Models\InfoAkademik;
 use App\Models\Prestasi;
@@ -134,5 +135,18 @@ class HomeController extends Controller
 
     public function prestasi(){
         return view('public.prestasi');
+    }
+
+    public function eventMahasiswa() {
+        return view('public.event.index');
+    }
+
+    public function showEventMahasiswa($id, $slug){
+        $event = EventMahasiswa::where('id', $id)->where('slug', $slug)->get(['id', 'judul', 'poster', 'tanggal', 'content_html'])->first();
+        $data = [
+            'event' => $event
+        ];
+
+        return view('public.event.show', $data);
     }
 }

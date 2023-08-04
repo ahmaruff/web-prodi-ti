@@ -23,6 +23,8 @@ Route::get('/fasilitas', [\App\Http\Controllers\HomeController::class, 'fasilita
 Route::get('/pusat-unduhan', [\App\Http\Controllers\HomeController::class, 'pusatUnduhan'])->name('public.pusat-unduhan');
 Route::get('himti-unsiq', [\App\Http\Controllers\HomeController::class, 'himti'])->name('public.himti');
 Route::get('prestasi', [\App\Http\Controllers\HomeController::class, 'prestasi'])->name('public.prestasi');
+Route::get('event', [\App\Http\Controllers\HomeController::class, 'eventMahasiswa'])->name('public.event.index');
+Route::get('event/{id}/{slug}', [\App\Http\Controllers\HomeController::class, 'showEventMahasiswa'])->name('public.event.show');
 
 // BERITA
 Route::get('/berita', [\App\Http\Controllers\BeritaController::class, 'index'])->name('public.berita.index');
