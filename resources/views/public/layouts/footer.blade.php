@@ -9,8 +9,8 @@
             </div>
         </div>
         <div class="md:w-3/4">
-            <div class="flex flex-row justify-around gap-8 text-sm text-gray-500">
-                <div class="w-1/2">
+            <div class="flex flex-col md:flex-row justify-around gap-8 text-sm text-gray-500">
+                <div class="md:w-1/2">
                     <h1 class="text-lg font-bold text-gray-900 hover:underline">Hubungi Kami</h1>
                     <p class="my-1 font-semibold">
                     Program Studi Teknik Informatika <br>
@@ -25,7 +25,7 @@
                     </p>
                     <a href="mailto:info@fastikom-unsiq.ac.id" class="block my-2 hover:underline hover:text-gray-800">info@fastikom-unsiq.ac.id</a>
                 </div>
-                <div class="w-1/2">
+                <div class="md:w-1/2">
                     <h1 class="text-lg font-bold text-gray-900 hover:underline">Pranala Luar</h1>
                     <a href="https://fastikom-unsiq.ac.id" class="block my-2 hover:underline hover:text-gray-800">Fakultas Teknik dan Ilmu Komputer</a>
                     <a href="https://ojs.unsiq.ac.id/index.php/device/index" class="block my-2 hover:underline hover:text-gray-800">Jurnal Ilmiah DEVICE</a>
