@@ -5,8 +5,8 @@ Prestasi Mahasiswa
 @endsection
 
 @section('content')
-<div class="flex flex-col-reverse items-center justify-center h-screen md:flex-row">
-    <div class="h-full bg-center bg-no-repeat bg-cover md:w-1/2" style="background-image: url('/assets/images/voli.jpg')">
+<div class="flex flex-col-reverse items-center justify-center md:h-screen md:flex-row">
+    <div class="md:h-full bg-center bg-no-repeat bg-cover md:w-1/2" style="background-image: url('/assets/images/voli.jpg')">
         <div class="pt-24" id=""></div>
     </div>
     <div class="z-20 md:w-1/2">

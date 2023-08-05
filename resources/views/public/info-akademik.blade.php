@@ -9,11 +9,11 @@
         {{ $info['judul'] }}
     </h1>
     <div class="bg-white min-h">
-        <div class="h-full mx-4 my-16 prose md:mx-24">
+        <div class="h-full mx-8 my-16 prose md:mx-24">
             {!! $info['content_html'] !!}
         </div>
     </div>
-    <div class="mx-4 md:mx-16">
+    <div class="mx-8 md:mx-16">
         <canvas id="the-canvas" class="w-full border-2" data-link="{{url('/storage/uploads/akademik/'.$info['dokumen'])}}"></canvas>
     </div>
 </div>

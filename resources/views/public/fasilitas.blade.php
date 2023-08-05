@@ -11,13 +11,13 @@
             <span class="text-purple-700 hover:text-purple-600">Fasilitas</span>  Program Studi Teknik Informatika
         </h1>
     </div>
-    <div class="h-96 bg-center bg-no-repeat bg-cover md:w-1/2" style="background-image: url('/assets/images/maba-jalan-2.jpg')">
+    <div class="md:h-96 bg-center bg-no-repeat bg-cover md:w-1/2" style="background-image: url('/assets/images/maba-jalan-2.jpg')">
     </div>
 </div>
 <div class="w-full min-h-96 py-24">
-    <div x-data x-masonry class="grid grid-cols-2 md:grid-cols-4 gap-6 my-16 md:my-20 mx-16 md:mx-24">
+    <div x-data x-masonry class="grid grid-cols-1s md:grid-cols-4 gap-6 my-16 md:my-20 md:mx-24">
         @foreach ($fasilitas as $item)
-            <div class="h-fit bg-white shadow-lg rounded-xl min-w-80 hover:scale-105 hover:transition-all hover:ease-in-out">
+            <div class="h-fit bg-white shadow-lg md:rounded-xl w-full md:min-w-80 hover:scale-105 hover:transition-all hover:ease-in-out">
                 <div class="w-full h-52">
                     <img src="{{asset('/storage/uploads/fasilitas/'.$item['image'])}}" alt="" class="object-cover w-full h-full rounded-t-xl">
                 </div>

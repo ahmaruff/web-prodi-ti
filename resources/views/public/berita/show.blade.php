@@ -14,7 +14,7 @@
     <h1 class="text-2xl font-black md:text-4xl text-center pt-8 mx-8 md:mx-24">
         {{$artikel->title}}
     </h1>
-    <div class="self-center p-4 text-center">
+    <div class="self-center md:p-4 mx-8 text-center">
         <span class="border-r-2 border-gray-700 px-2">
             <x-local-time datetime="{{$artikel->published_at}}" />
         </span>
@@ -25,10 +25,16 @@
             {{$artikel->category}}
         </span>
     </div>
-
-    <div class="w-full bg-white self-center">
-        <div class="mx-auto my-16 prose">
+    <div class="w-full bg-white self-center w-full flex flex-col justify-center">
+        <div class="mx-8 my-16 prose container w-fit md:mx-auto">
             {!! $artikel->content_html !!}
+
+            <hr>
+            <div class="w-fit text-lg font-bold mx-8 hover:text-purple-600 ml-auto">
+                <a href="{{route('public.berita.index')}}">
+                <x-lucide-arrow-left class="w-6 h-6 inline-block" /> <span>Kembali</span>
+                </a>
+            </div>
         </div>
     </div>
 </div>

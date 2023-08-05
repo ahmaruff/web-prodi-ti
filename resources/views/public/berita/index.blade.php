@@ -5,7 +5,7 @@
 
 @section('content')
 <div class="flex flex-col justify-center">
-    <h1 class="py-24 text-4xl font-black text-center md:text-6xl md:py-32">
+    <h1 class="py-24 text-4xl font-black text-center md:text-6xl md:py-32 mx-8">
         <span class="text-purple-600">Berita</span> dan Informasi
     </h1>
 </div>

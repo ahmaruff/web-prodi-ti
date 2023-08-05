@@ -26,7 +26,7 @@ HIMTI FASTIKOM UNSIQ
     <div class="bg-center bg-no-repeat bg-cover md:w-1/2" style="background-image: url('/assets/images/raker.jpg')">
         <div class="pt-24" id="about"></div>
     </div>
-    <div class="mx-4 md:w-1/2 md:mx-10">
+    <div class="mx-8 md:w-1/2 md:mx-10">
         <div class="md:pt-24"></div>
         <div class="w-full">
             <img src="/assets/images/logo/logo-himti.png" alt="" class="object-contain w-1/4 aspect-auto">
@@ -44,7 +44,7 @@ HIMTI FASTIKOM UNSIQ
 </div>
 <div class="pt-24" id="visi"></div>
 <div class="flex flex-col w-full min-h-screen md:flex-row">
-    <div class="h-full mx-4 text-right md:w-1/2 md:mx-10">
+    <div class="h-full mx-8 text-right md:w-1/2 md:mx-10">
         <h1 class="my-6 text-3xl font-black md:text-6xl">Teknik Informatika<span class="text-purple-600">!</span></h1>
 
         <h3 class="my-2 text-xl font-bold text-gray-600 md:my-4 md:text-3xl">
@@ -54,7 +54,7 @@ HIMTI FASTIKOM UNSIQ
             Jaya, Jaya, <span class="text-gray-500">Jaya!</span>
         </h3>
     </div>
-    <div class="h-full mx-4 md:w-1/2 md:mx-10">
+    <div class="h-full mx-8 md:w-1/2 md:mx-10">
         <div class="hidden md:block md:mt-48"></div>
         <div class="">
             <h1 class="my-6 text-4xl font-bold text-purple-600 md:text-6xl drop-shadow-sm">Visi</h1>
@@ -67,7 +67,7 @@ HIMTI FASTIKOM UNSIQ
 <div class="flex flex-col w-full min-h-screen bg-white md:flex-row">
     <div class="hidden bg-center bg-no-repeat bg-cover md:h-screen md:w-1/2 md:block" style="background-image: url('/assets/images/makrab.jpg')">
     </div>
-    <div class="mx-4 md:w-1/2 md:mx-10">
+    <div class="mx-8 md:w-1/2 md:mx-10">
         <h1 class="mt-6 mb-6 text-4xl font-bold text-purple-600 md:text-6xl drop-shadow-sm md:mt-14">Misi</h1>
         <ul class="font-light md:mr-8">
             <li class="my-3 text-lg md:text-xl hover:font-semibold">
@@ -91,7 +91,7 @@ HIMTI FASTIKOM UNSIQ
 <div>
     <h1 class="mt-6 mb-6 text-4xl font-bold text-center md:text-6xl drop-shadow-sm md:mt-14">Program <span class="text-purple-600">Kerja</span></h1>
     <div>
-        <div x-data x-masonry class="grid grid-cols-2 gap-8 mx-4 my-8 md:grid-cols-4 md:my-16 md:mx-16">
+        <div x-data x-masonry class="grid grid-cols-1 gap-8 mx-8 my-8 md:grid-cols-4 md:my-16 md:mx-16">
             @foreach ($program_kerja as $proker)
             <div class="w-fit h-fit">
                 <h1 class="text-xl font-semibold hover:text-purple-600">
@@ -107,41 +107,41 @@ HIMTI FASTIKOM UNSIQ
 </div>
 <div class="bg-white">
     <h1 class="mt-6 mb-6 text-4xl font-bold text-center md:text-6xl drop-shadow-sm md:mt-14">Ko<span class="text-purple-600">ntak</span></h1>
-    <div class="flex flex-wrap items-center justify-center gap-4 mx-8 mb-16 md:mx-16">
+    <div class="flex flex-wrap items-center justify-center gap-y-4 mx-8 mb-16 md:mx-16">
         <a href="https://himti.fastikom-unsiq.ac.id" target="_blank"
-        class="px-8 py-3 text-xl font-semibold text-center bg-gray-100 rounded-full shadow-lg hover:underline hover:text-purple-600 hover:bg-gray-50"
+        class="mx-4 md:px-8 py-3 md:text-xl font-semibold text-center bg-gray-100 w-full md:w-fit rounded-full shadow-lg hover:underline hover:text-purple-600 hover:bg-gray-50"
         >
-        <span> <x-lucide-globe class="inline-block w-10 h-10 mr-2"/></span>
+        <span> <x-lucide-globe class="inline-block w-6 h-6 md:w-10 md:h-10 mr-2"/></span>
         <span>https://himti.fastikom-unsiq.ac.id</span>
         </a>
         <a href="https://instagram.com/himtunsiq/" target="_blank"
-        class="px-8 py-3 text-xl font-semibold text-center bg-gray-100 rounded-full shadow-lg hover:underline hover:text-purple-600 hover:bg-gray-50"
+        class="mx-4 md:px-8 py-3 md:text-xl font-semibold text-center bg-gray-100 w-full md:w-fit rounded-full shadow-lg hover:underline hover:text-purple-600 hover:bg-gray-50"
         >
-        <span> <x-lucide-instagram class="inline-block w-10 h-10 mr-2"/></span>
+        <span> <x-lucide-instagram class="inline-block w-6 h-6 md:w-10 md:h-10 mr-2"/></span>
         <span>@himtiunsiq</span>
         </a>
         <a href="mailto:himti@fastikom-unsiq.ac.id" target="_blank"
-        class="px-8 py-3 text-xl font-semibold text-center bg-gray-100 rounded-full shadow-lg hover:underline hover:text-purple-600 hover:bg-gray-50"
+        class="mx-4 md:px-8 py-3 md:text-xl font-semibold text-center bg-gray-100 w-full md:w-fit rounded-full shadow-lg hover:underline hover:text-purple-600 hover:bg-gray-50"
         >
-        <span> <x-lucide-mail class="inline-block w-10 h-10 mr-2"/></span>
+        <span> <x-lucide-mail class="inline-block w-6 h-6 md:w-10 md:h-10 mr-2"/></span>
         <span>himti@fastikom-unsiq.ac.id</span>
         </a>
         <a href="mailto:himtifastikom@gmail.com" target="_blank"
-        class="px-8 py-3 text-xl font-semibold text-center bg-gray-100 rounded-full shadow-lg hover:underline hover:text-purple-600 hover:bg-gray-50"
+        class="mx-4 md:px-8 py-3 md:text-xl font-semibold text-center bg-gray-100 w-full md:w-fit rounded-full shadow-lg hover:underline hover:text-purple-600 hover:bg-gray-50"
         >
-        <span> <x-lucide-mail class="inline-block w-10 h-10 mr-2"/></span>
+        <span> <x-lucide-mail class="inline-block w-6 h-6 md:w-10 md:h-10 mr-2"/></span>
         <span>himtifastikom@gmail.com</span>
         </a>
         <a href="https://youtube.com/@HIMTIFASTIKOMUNSIQ" target="_blank"
-        class="px-8 py-3 text-xl font-semibold text-center bg-gray-100 rounded-full shadow-lg hover:underline hover:text-purple-600 hover:bg-gray-50"
+        class="mx-4 md:px-8 py-3 md:text-xl font-semibold text-center bg-gray-100 w-full md:w-fit rounded-full shadow-lg hover:underline hover:text-purple-600 hover:bg-gray-50"
         >
-        <span> <x-lucide-youtube class="inline-block w-10 h-10 mr-2"/></span>
+        <span> <x-lucide-youtube class="inline-block w-6 h-6 md:w-10 md:h-10 mr-2"/></span>
         <span>Himti Fastikom Unsiq</span>
         </a>
         <a href="https://www.tiktok.com/@daily_himti" target="_blank"
-        class="px-8 py-3 text-xl font-semibold text-center bg-gray-100 rounded-full shadow-lg hover:underline hover:text-purple-600 hover:bg-gray-50"
+        class="mx-4 md:px-8 py-3 md:text-xl font-semibold text-center bg-gray-100 w-full md:w-fit rounded-full shadow-lg hover:underline hover:text-purple-600 hover:bg-gray-50"
         >
-        <span> <img src="/assets/images/icons/logo-tiktok.svg" alt="" class="inline-block w-10 h-10 mr-2"></span>
+        <span> <img src="/assets/images/icons/logo-tiktok.svg" alt="" class="inline-block w-6 h-6 md:w-10 md:h-10 mr-2"></span>
         <span>@daily_himti</span>
         </a>
 

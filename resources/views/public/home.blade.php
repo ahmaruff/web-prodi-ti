@@ -1,6 +1,5 @@
 @extends('public.layouts.base')
 
-
 @section('title')
 Teknik Informatika UNSIQ
 @endsection
@@ -15,14 +14,14 @@ Teknik Informatika UNSIQ
             <div class="absolute z-10 w-32 pt-32 rounded-full shadow-lg top-48 right-20 bg-gradient-to-br from-amber-400 to-red-400 hover:transition hover:ease-linear hover:scale-125"></div>
             <div class="absolute top-0 z-10 w-24 pt-24 rounded-lg shadow-lg right-20 bg-gradient-to-br from-pink-500 to-indigo-300 hover:transition hover:ease-linear hover:scale-110"></div>
             <div class="absolute z-20 w-48 pt-24 rounded-full shadow-lg top-2 right-64 bg-gradient-to-tl from-amber-500 to-yellow-300 hover:transition hover:ease-linear hover:scale-110"></div>
-            <div class="absolute z-20 w-2/3 rounded-lg top-6 left-8 md:left-24 aspect-video hover:transition hover:ease-linear">
+            <div class="absolute z-20 w-2/3 rounded-l top-40 md:top-6 left-8 md:left-24 aspect-video hover:transition hover:ease-linear">
                 <img src="/assets/images/hero.jpg" alt="" class="object-cover w-full ease-in-out rounded-lg shadow-2xl aspect-video hover:transition hover:ease-linear hover:scale-105">
             </div>
         </div>
     </div>
     <div class="w-full px-8 md:w-1/2">
         <div>
-            <h1 class="text-4xl font-black md:text-6xl">
+            <h1 class="text-4xl font-black md:text-6xl pt-4">
                 We Build a <span class="text-purple-700 hover:text-purple-600">Better Tech</span> For Humanity
             </h1>
             <h2 class="block mt-6 text-xl font-light md:text-2xl">
@@ -81,9 +80,9 @@ Teknik Informatika UNSIQ
                 </li>
             </ul>
         </div>
-        <div class="flex items-center justify-center w-full md:w-1/2 sm:mt-16 md:mt-0">
-            <div class="container w-full" x-data="{ activeAccordion: 0 }">
-                <h1 class="mb-2 font-bold ttext-3xl md:text-4xl hover:transition hover:scale-105">
+        <div class="flex items-center justify-center w-full md:w-1/2 mt-10 md:mt-0">
+            <div class="container" x-data="{ activeAccordion: 0 }">
+                <h1 class="mb-2 font-bold text-3xl md:text-4xl hover:transition hover:scale-105">
                    <span class="text-purple-600">Profil</span> Lulusan
                 </h1>
                 @foreach ($profil_lulusan as $lulusan)

@@ -1,9 +1,9 @@
 <div>
-    <div class="flex flex-col items-center justify-between w-full md:flex-row">
-        <div class="px-8 py-3 font-bold text-left text-white rounded-r-full shadow-lg w-fit bg-gradient-to-tr from-purple-500 to-pink-500 hover:bg-gradient-to-tr hover:from-purple-700 hover:to-pink-600 hover:translate-y-1 hover:shadow-2xl hover:ease-linear hover:transition font-lg">
+    <div class="flex flex-col items-center justifu-center md:justify-between w-full md:flex-ro gap-y-4">
+        <div class="px-8 py-3 font-bold text-left text-white rounded-r-full shadow-lg w-full md:w-fit bg-gradient-to-tr from-purple-500 to-pink-500 hover:bg-gradient-to-tr hover:from-purple-700 hover:to-pink-600 hover:translate-y-1 hover:shadow-2xl hover:ease-linear hover:transition font-lg">
             Informasi & Berita
         </div>
-        <div class="flex flex-col gap-3 md:flex-row w-fit">
+        <div class="flex flex-col gap-3 md:flex-row w-full md:w-fit">
             <div>
                 <label for="category" class="mr-2">Kategori</label>
                 <select wire:model='category' id="" class="bg-white border-purple-500 rounded-lg focus:border-2 ring-1 focus:shadow-lg">
@@ -13,10 +13,10 @@
                     <option value="kemahasiswaan">Kemahasiswaan</option>
                 </select>
             </div>
-            <input type="text" wire:model='search' placeholder="Cari Artikel" class="block px-4 py-2 bg-white border-purple-500 rounded-lg focus:shadow-lg focus:border-2 ring-1">
+            <input type="text" wire:model='search' placeholder="Cari Artikel" class="block px-4 py-2 w-auto bg-white border-purple-500 rounded-lg focus:shadow-lg focus:border-2 ring-1">
         </div>
     </div>
-    <div x-data x-masonry class="grid grid-cols-2 gap-8 mx-16 my-8 md:grid-cols-4 md:mx-24">
+    <div x-data x-masonry class="grid grid-cols-1 gap-4 md:gap-8 my-8 md:grid-cols-4">
         @foreach ($artikel as $item)
         <div class="w-full bg-gray-100 shadow-md h-fit rounded-xl hover:scale-105 hover:ease-in-out hover:transition-all">
             <div class="hidden md:block md:w-full md:h-1/2">
