@@ -1,4 +1,4 @@
-<nav x-data="accordion(6)" class="fixed top-0 z-40 flex flex-wrap items-center justify-between w-full px-4 py-5 tracking-wide bg-gray-100 bg-opacity-80 md:px-8 lg:px-14">
+<nav x-data="accordion(6)" class="fixed top-0 z-40 flex flex-wrap items-center justify-between w-full px-4 py-5 tracking-wide bg-gray-100  md:px-8 lg:px-14">
     <!-- Left nav -->
     <div class="flex items-center">
         <a href="#" class="text-3xl tracking-wide">
@@ -36,26 +36,81 @@
             <hr>
             <a href="{{route('public.berita.index')}}" class="hover:text-gray-900"><span>Berita</span></a>
             <hr>
-            {{-- <a href="{{route('public.visi-misi')}}" class="hover:text-gray-900"><span>Visi Misi</span></a>
-            <hr> --}}
-            <a href="{{route('public.struktur-org')}}" class="hover:text-gray-900"><span>Struktur Organisasi</span></a>
+            <!-- Dropdown 1 -->
+            <div x-data="{ open: false }" @mouseleave="open = false" class="relative inline-block" :class="{'text-gray-900': open, 'text-gray-600': !open }">
+                <!-- Dropdown Toggle Button -->
+                <button @mouseover="open = true" class="flex items-center rounded-md">
+                    <span class="">Profil</span>
+                    <span :class="open = ! open ? '': '-rotate-180'" class="transition-transform duration-500 transform">
+                        <svg class="w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                            <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                        </svg>
+                    </span>
+                </button>
+            <!-- End Dropdown Toggle Button -->
+
+                <!-- Dropdown Menu -->
+                <div x-show="open" class="w-full" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 transform scale-90" x-transition:enter-end="opacity-100 transform scale-100" x-transition:leave="transition ease-in duration-300" x-transition:leave-start="opacity-100 transform scale-100" x-transition:leave-end="opacity-0 transform scale-90" class="absolute right-0 py-1 text-gray-500 bg-white rounded-lg shadow-xl min-w-max">
+                    <a href="{{route('public.visi-misi')}}" class="block px-4 py-1 hover:text-gray-900 hover:bg-gray-100">Visi Misi</a>
+                    <a href="{{route('public.struktur-org')}}" class="block px-4 py-1 hover:text-gray-900 hover:bg-gray-100">Struktur Organisasi</a>
+                    <a href="{{route('public.akreditasi')}}" class="block px-4 py-1 hover:text-gray-900 hover:bg-gray-100">Akreditasi</a>
+                    <a href="{{route('public.fasilitas')}}" class="block px-4 py-1 hover:text-gray-900 hover:bg-gray-100">Fasilitas</a>
+                </div>
+                <!-- End Dropdown Menu -->
+            </div>
+            <!-- End Dropdown 1 -->
             <hr>
-            {{-- <a href="{{route('public.fasilitas')}}" class="hover:text-gray-900"><span>Fasilitas</span></a>
-            <hr> --}}
-            {{-- <a href="{{route('public.info-akademik', 'kurikulum')}}" class="hover:text-gray-900"><span>Kurikulum</span></a>
-            <hr> --}}
-            {{-- <a href="{{route('public.info-akademik', 'tugas-akhir')}}" class="hover:text-gray-900"><span>Tugas Akhir</span></a>
-            <hr> --}}
-            {{-- <a href="{{route('public.info-akademik', 'kerja-praktek')}}" class="hover:text-gray-900"><span>Kerja Praktek</span></a>
-            <hr> --}}
-            <a href="{{route('public.info-akademik', 'kalender-akademik')}}" class="hover:text-gray-900"><span>Kalender Akademik</span></a>
+            <!-- Dropdown 2 -->
+            <div x-data="{ open: false }" @mouseleave="open = false" class="relative inline-block" :class="{'text-gray-900': open, 'text-gray-600': !open }">
+                <!-- Dropdown Toggle Button -->
+                <button @mouseover="open = true" class="flex items-center rounded-md">
+                    <span class="">Akademik</span>
+                    <span :class="open = ! open ? '': '-rotate-180'" class="transition-transform duration-500 transform">
+                        <svg class="w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                            <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                        </svg>
+                    </span>
+                </button>
+            <!-- End Dropdown Toggle Button -->
+
+                <!-- Dropdown Menu -->
+                <div x-show="open" class="w-full" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 transform scale-90" x-transition:enter-end="opacity-100 transform scale-100" x-transition:leave="transition ease-in duration-300" x-transition:leave-start="opacity-100 transform scale-100" x-transition:leave-end="opacity-0 transform scale-90" class="absolute right-0 py-1 text-gray-500 bg-white rounded-lg shadow-xl min-w-max">
+                    <a href="{{route('public.info-akademik', 'kalender-akademik')}}" class="block px-4 py-1 hover:text-gray-900 hover:bg-gray-100">Kalender Akademik</a>
+                    <a href="{{route('public.info-akademik', 'kurikulum')}}" class="block px-4 py-1 hover:text-gray-900 hover:bg-gray-100">Kurikulum</a>
+                    <a href="{{route('public.info-akademik', 'tugas-akhir')}}" class="block px-4 py-1 hover:text-gray-900 hover:bg-gray-100">Tugas Akhir</a>
+                    <a href="{{route('public.info-akademik', 'kerja-praktek')}}" class="block px-4 py-1 hover:text-gray-900 hover:bg-gray-100">Kerja Praktek</a>
+                    <a href="{{route('public.info-akademik', 'kampus-merdeka')}}" class="block px-4 py-1 hover:text-gray-900 hover:bg-gray-100">Kampus Merdeka</a>
+                </div>
+                <!-- End Dropdown Menu -->
+            </div>
+            <!-- End Dropdown 2 -->
             <hr>
-            {{-- <a href="{{route('public.himti')}}" class="hover:text-gray-900"><span>Himti UNSIQ</span></a>
-            <hr> --}}
-            <a href="{{route('public.info-akademik', 'kurikulum')}}" class="hover:text-gray-900"><span>Event</span></a>
+
+            <!-- Dropdown 3 -->
+            <div x-data="{ open: false }" @mouseleave="open = false" class="relative inline-block" :class="{'text-gray-900': open, 'text-gray-600': !open }">
+                <!-- Dropdown Toggle Button -->
+                <button @mouseover="open = true" class="flex items-center rounded-md">
+                    <span class="">Kemahasiswaan</span>
+                    <span :class="open = ! open ? '': '-rotate-180'" class="transition-transform duration-500 transform">
+                        <svg class="w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                            <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                        </svg>
+                    </span>
+                </button>
+            <!-- End Dropdown Toggle Button -->
+
+                <!-- Dropdown Menu -->
+                <div x-show="open" class="w-full" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 transform scale-90" x-transition:enter-end="opacity-100 transform scale-100" x-transition:leave="transition ease-in duration-300" x-transition:leave-start="opacity-100 transform scale-100" x-transition:leave-end="opacity-0 transform scale-90" class="absolute right-0 py-1 text-gray-500 bg-white rounded-lg shadow-xl min-w-max">
+                    {{-- <a href="{{route('public.himti')}}" class="block px-4 py-1 hover:text-gray-900 hover:bg-gray-100">Himti UNSIQ</a> --}}
+                    <a href="{{route('public.prestasi')}}" class="block px-4 py-1 hover:text-gray-900 hover:bg-gray-100">Prestasi Mahasiswa</a>
+                    <a href="{{route('public.event.index')}}" class="block px-4 py-1 hover:text-gray-900 hover:bg-gray-100">Event Mahasiswa</a>
+                </div>
+                <!-- End Dropdown Menu -->
+            </div>
+            <!-- End Dropdown 3 -->
             <hr>
-            <a href="{{route('public.info-akademik', 'kurikulum')}}" class="hover:text-gray-900"><span>Prestasi</span></a>
-            <hr>
+
+
             <a href="{{route('public.pusat-unduhan')}}" class="hover:text-gray-900"><span>Pusat Unduhan</span></a>
 
         </div>
@@ -69,18 +124,18 @@
                     Contact
                 </a>
             </div>
-        </div>
+        </div> --}}
         <div>
-            <a href="#" class="flex items-center justify-center w-full px-4 py-2 text-base font-medium text-white bg-gray-600 border border-transparent rounded-md shadow-sm hover:bg-gray-700">
-                Sign up
+            <a href="{{route('public.himti')}}" class="flex items-center justify-center w-full px-4 py-2 text-base font-medium text-white bg-gray-600 border border-transparent rounded-md shadow-sm hover:bg-gray-700">
+                Himti
             </a>
-            <p class="mt-6 text-base font-medium text-center text-gray-500">
+            {{-- <p class="mt-6 text-base font-medium text-center text-gray-500">
                 Existing customer?
                 <a href="#" class="text-gray-600 hover:text-gray-900">
                     Sign in
                 </a>
-            </p>
-        </div> --}}
+            </p> --}}
+        </div>
     </div>
     <!-- End toggle menu -->
     <!-- End show menu sm,md -->
@@ -150,7 +205,7 @@
             </div>
             <!-- End Dropdown 2 -->
 
-            <!-- Dropdown 2 -->
+            <!-- Dropdown 3 -->
             <div x-data="{ open: false }" @mouseleave="open = false" class="relative inline-block" :class="{'text-gray-900': open, 'text-gray-600': !open }">
                 <!-- Dropdown Toggle Button -->
                 <button @mouseover="open = true" class="flex items-center p-2 rounded-md">
@@ -171,7 +226,7 @@
                 </div>
                 <!-- End Dropdown Menu -->
             </div>
-            <!-- End Dropdown 2 -->
+            <!-- End Dropdown 3 -->
 
             <div class="mr-3">
                 <a href="{{route('public.pusat-unduhan')}}" class="inline-block px-4 py-2 text-gray-600 no-underline hover:text-gray-900">
