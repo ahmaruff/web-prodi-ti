@@ -21,7 +21,7 @@ Route::get('/akademik/{link}', [\App\Http\Controllers\HomeController::class, 'in
 Route::get('/akreditasi', [\App\Http\Controllers\HomeController::class, 'akreditasi'])->name('public.akreditasi');
 Route::get('/fasilitas', [\App\Http\Controllers\HomeController::class, 'fasilitas'])->name('public.fasilitas');
 Route::get('/pusat-unduhan', [\App\Http\Controllers\HomeController::class, 'pusatUnduhan'])->name('public.pusat-unduhan');
-Route::get('himti-unsiq', [\App\Http\Controllers\HomeController::class, 'himti'])->name('public.himti');
+Route::get('himti', [\App\Http\Controllers\HomeController::class, 'himti'])->name('public.himti');
 Route::get('prestasi', [\App\Http\Controllers\HomeController::class, 'prestasi'])->name('public.prestasi');
 Route::get('event', [\App\Http\Controllers\HomeController::class, 'eventMahasiswa'])->name('public.event.index');
 Route::get('event/{id}/{slug}', [\App\Http\Controllers\HomeController::class, 'showEventMahasiswa'])->name('public.event.show');
