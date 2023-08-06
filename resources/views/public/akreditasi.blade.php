@@ -7,22 +7,22 @@
 <div class="flex flex-col items-center w-full min-h-96 md:flex-row">
     <div class="md:w-1/2 h-min">
         <div class="pt-24 md:pt-32"></div>
-        <h1 class="mx-16 text-4xl font-black md:text-6xl">
+        <h1 class="m-16 text-4xl font-black md:text-6xl">
             <span class="text-purple-700 hover:text-purple-600">Akreditasi</span>  Program Studi Teknik Informatika
         </h1>
     </div>
-    <div class="md:h-96 bg-center bg-no-repeat bg-cover md:w-1/2" style="background-image: url('/assets/images/maba-jalan.jpg')">
+    <div class="bg-center bg-no-repeat bg-cover md:h-96 md:w-1/2" style="background-image: url('/assets/images/maba-jalan.jpg')">
     </div>
 </div>
-<div class="w-full min-h-96 py-24 bg-white">
-    <div class="flex flex-col min-h-96 container justify-center mx-auto items-center">
+<div class="w-full py-24 bg-white min-h-96">
+    <div class="container flex flex-col items-center justify-center mx-auto min-h-96">
         @foreach ($akreditasi as $akred)
-        <div class="md:w-2/3 bg-gray-100 rounded-xl shadow-xl p-6 border-2 hover:bg-white mx-4">
-            <table class="table-auto text-left w-full">
+        <div class="p-6 mx-4 bg-gray-100 border-2 shadow-xl md:w-2/3 rounded-xl hover:bg-white">
+            <table class="w-full text-left table-auto">
                 <tbody>
                     <tr>
                         <th>Peringkat</th>
-                        <td class="font-bold text-xl">
+                        <td class="text-xl font-bold">
                             {{$akred['peringkat']}}
                         </td>
                     </tr>
@@ -52,7 +52,7 @@
                     </tr>
                     <tr>
                         <th>Status</th>
-                        <td class="font-semibold text-lg text-purple-700 capitalize">
+                        <td class="text-lg font-semibold text-purple-700 capitalize">
                             {{$akred['status']}}
                         </td>
                     </tr>
@@ -60,7 +60,7 @@
                         <th>Dokumen</th>
                         <td>
                             <a href="{{url('/storage/uploads/akreditasi/'.$akred['dokumen_sk'])}}"
-                            class="text-sm font-semibold hover:underline text-blue-600 hover:text-blue-800"
+                            class="text-sm font-semibold text-blue-600 hover:underline hover:text-blue-800"
                             >
                             Unduh disini
                         </a>

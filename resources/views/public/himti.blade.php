@@ -14,15 +14,15 @@ HIMTI FASTIKOM UNSIQ
         </a>
     </div>
     <div class="md:w-1/2">
-        <div class="relative h-full aspect-video">
-            <div class="absolute top-0 left-0 z-10 w-48 h-48 rounded-full shadow-lg bg-gradient-to-tl from-amber-500 to-yellow-300 hover:transition hover:ease-linear hover:scale-110"></div>
+        <div class="relative h-full md:aspect-video">
+            <div class="absolute top-0 z-10 w-48 h-48 rounded-full shadow-lg -left-6 md:left-0 bg-gradient-to-tl from-amber-500 to-yellow-300 hover:transition hover:ease-linear hover:scale-110"></div>
             <div class="absolute z-10 w-20 h-20 rounded-full shadow-lg right-6 top-8 bg-gradient-to-tl from-pink-500 to-yellow-400 hover:transition hover:ease-linear hover:scale-110"></div>
             <div class="absolute bottom-0 right-0 z-10 w-48 h-20 rounded-full shadow-lg bg-gradient-to-tl from-pink-500 to-indigo-400 hover:transition hover:ease-linear hover:scale-110"></div>
             <img src="/assets/images/upgrading.jpg" alt="" class="absolute z-20 object-cover w-5/6 shadow-2xl aspect-video rounded-3xl left-8 top-10 hover:transition hover:ease-linear hover:scale-105">
         </div>
     </div>
 </div>
-<div class="flex flex-col w-full min-h-screen bg-white md:flex-row">
+<div class="flex flex-col w-full bg-white md:min-h-screen md:flex-row">
     <div class="bg-center bg-no-repeat bg-cover md:w-1/2" style="background-image: url('/assets/images/raker.jpg')">
         <div class="pt-24" id="about"></div>
     </div>
@@ -107,41 +107,41 @@ HIMTI FASTIKOM UNSIQ
 </div>
 <div class="bg-white">
     <h1 class="mt-6 mb-6 text-4xl font-bold text-center md:text-6xl drop-shadow-sm md:mt-14">Ko<span class="text-purple-600">ntak</span></h1>
-    <div class="flex flex-wrap items-center justify-center gap-y-4 mx-8 mb-16 md:mx-16">
+    <div class="flex flex-wrap items-center justify-center mx-8 mb-16 gap-y-4 md:mx-16">
         <a href="https://himti.fastikom-unsiq.ac.id" target="_blank"
-        class="mx-4 md:px-8 py-3 md:text-xl font-semibold text-center bg-gray-100 w-full md:w-fit rounded-full shadow-lg hover:underline hover:text-purple-600 hover:bg-gray-50"
+        class="w-full py-3 mx-4 text-xs font-semibold text-center bg-gray-100 rounded-full shadow-lg md:px-8 md:text-xl md:w-fit hover:underline hover:text-purple-600 hover:bg-gray-50"
         >
-        <span> <x-lucide-globe class="inline-block w-6 h-6 md:w-10 md:h-10 mr-2"/></span>
+        <span> <x-lucide-globe class="inline-block w-6 h-6 mr-2 md:w-10 md:h-10"/></span>
         <span>https://himti.fastikom-unsiq.ac.id</span>
         </a>
         <a href="https://instagram.com/himtunsiq/" target="_blank"
-        class="mx-4 md:px-8 py-3 md:text-xl font-semibold text-center bg-gray-100 w-full md:w-fit rounded-full shadow-lg hover:underline hover:text-purple-600 hover:bg-gray-50"
+        class="w-full py-3 mx-4 text-xs font-semibold text-center bg-gray-100 rounded-full shadow-lg md:px-8 md:text-xl md:w-fit hover:underline hover:text-purple-600 hover:bg-gray-50"
         >
-        <span> <x-lucide-instagram class="inline-block w-6 h-6 md:w-10 md:h-10 mr-2"/></span>
+        <span> <x-lucide-instagram class="inline-block w-6 h-6 mr-2 md:w-10 md:h-10"/></span>
         <span>@himtiunsiq</span>
         </a>
         <a href="mailto:himti@fastikom-unsiq.ac.id" target="_blank"
-        class="mx-4 md:px-8 py-3 md:text-xl font-semibold text-center bg-gray-100 w-full md:w-fit rounded-full shadow-lg hover:underline hover:text-purple-600 hover:bg-gray-50"
+        class="w-full py-3 mx-4 text-xs font-semibold text-center bg-gray-100 rounded-full shadow-lg md:px-8 md:text-xl md:w-fit hover:underline hover:text-purple-600 hover:bg-gray-50"
         >
-        <span> <x-lucide-mail class="inline-block w-6 h-6 md:w-10 md:h-10 mr-2"/></span>
+        <span> <x-lucide-mail class="inline-block w-6 h-6 mr-2 md:w-10 md:h-10"/></span>
         <span>himti@fastikom-unsiq.ac.id</span>
         </a>
         <a href="mailto:himtifastikom@gmail.com" target="_blank"
-        class="mx-4 md:px-8 py-3 md:text-xl font-semibold text-center bg-gray-100 w-full md:w-fit rounded-full shadow-lg hover:underline hover:text-purple-600 hover:bg-gray-50"
+        class="w-full py-3 mx-4 text-xs font-semibold text-center bg-gray-100 rounded-full shadow-lg md:px-8 md:text-xl md:w-fit hover:underline hover:text-purple-600 hover:bg-gray-50"
         >
-        <span> <x-lucide-mail class="inline-block w-6 h-6 md:w-10 md:h-10 mr-2"/></span>
+        <span> <x-lucide-mail class="inline-block w-6 h-6 mr-2 md:w-10 md:h-10"/></span>
         <span>himtifastikom@gmail.com</span>
         </a>
         <a href="https://youtube.com/@HIMTIFASTIKOMUNSIQ" target="_blank"
-        class="mx-4 md:px-8 py-3 md:text-xl font-semibold text-center bg-gray-100 w-full md:w-fit rounded-full shadow-lg hover:underline hover:text-purple-600 hover:bg-gray-50"
+        class="w-full py-3 mx-4 text-xs font-semibold text-center bg-gray-100 rounded-full shadow-lg md:px-8 md:text-xl md:w-fit hover:underline hover:text-purple-600 hover:bg-gray-50"
         >
-        <span> <x-lucide-youtube class="inline-block w-6 h-6 md:w-10 md:h-10 mr-2"/></span>
+        <span> <x-lucide-youtube class="inline-block w-6 h-6 mr-2 md:w-10 md:h-10"/></span>
         <span>Himti Fastikom Unsiq</span>
         </a>
         <a href="https://www.tiktok.com/@daily_himti" target="_blank"
-        class="mx-4 md:px-8 py-3 md:text-xl font-semibold text-center bg-gray-100 w-full md:w-fit rounded-full shadow-lg hover:underline hover:text-purple-600 hover:bg-gray-50"
+        class="w-full py-3 mx-4 text-xs font-semibold text-center bg-gray-100 rounded-full shadow-lg md:px-8 md:text-xl md:w-fit hover:underline hover:text-purple-600 hover:bg-gray-50"
         >
-        <span> <img src="/assets/images/icons/logo-tiktok.svg" alt="" class="inline-block w-6 h-6 md:w-10 md:h-10 mr-2"></span>
+        <span> <img src="/assets/images/icons/logo-tiktok.svg" alt="" class="inline-block w-6 h-6 mr-2 md:w-10 md:h-10"></span>
         <span>@daily_himti</span>
         </a>
 

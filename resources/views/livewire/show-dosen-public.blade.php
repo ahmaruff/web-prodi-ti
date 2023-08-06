@@ -1,8 +1,8 @@
 <div class="w-full">
     <div class="flex justify-center">
-        <input type="text" placeholder="Cari Dosen" wire:model='search' class="w-1/2 text-center bg-white border-2 border-purple-500 rounded-full shadow-md focus:border-purple-700 focus:shadow-lg">
+        <input type="text" placeholder="Cari Dosen" wire:model='search' class="mx-8 text-center bg-white border-2 border-purple-500 rounded-full shadow-md md:w-1/2 focus:border-purple-700 focus:shadow-lg">
     </div>
-    <div x-data x-masonry class="grid grid-cols-1 mx-4 gap-8 my-16 md:grid-cols-4 md:my-20 md:mx-24">
+    <div x-data x-masonry class="grid grid-cols-1 gap-8 mx-4 my-16 md:grid-cols-4 md:my-20 md:mx-24">
         @foreach ($dosen as $item)
             <div class="bg-white shadow-lg h-fit rounded-xl min-w-60 hover:scale-105 hover:transition-all hover:ease-in-out">
                 <div class="w-full h-52">

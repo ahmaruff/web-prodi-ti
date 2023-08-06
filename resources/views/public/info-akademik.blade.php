@@ -5,16 +5,16 @@
 
 @section('content')
 <div class="flex flex-col justify-center min-h-screen">
-    <h1 class="py-24 text-4xl font-black text-center break-words md:text-6xl md:py-32">
+    <h1 class="py-24 mx-8 text-4xl font-black text-center break-words md:text-6xl md:py-32">
         {{ $info['judul'] }}
     </h1>
-    <div class="bg-white min-h">
-        <div class="h-full mx-8 my-16 prose md:mx-24">
+    <div class="bg-white min-h-fit">
+        <div class="mx-8 my-16 prose md:mx-24">
             {!! $info['content_html'] !!}
         </div>
     </div>
     <div class="mx-8 md:mx-16">
-        <canvas id="the-canvas" class="w-full border-2" data-link="{{url('/storage/uploads/akademik/'.$info['dokumen'])}}"></canvas>
+        <canvas id="the-canvas" class="w-full" data-link="{{url('/storage/uploads/akademik/'.$info['dokumen'])}}"></canvas>
     </div>
 </div>
 @endsection

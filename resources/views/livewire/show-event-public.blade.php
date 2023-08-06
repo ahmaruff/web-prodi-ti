@@ -1,8 +1,8 @@
 <div>
     <div class="flex justify-center">
-        <input type="text" placeholder="Cari Event" wire:model='search' class="w-1/2 text-center bg-white border-2 border-purple-500 rounded-full shadow-md focus:border-purple-700 focus:shadow-lg">
+        <input type="text" placeholder="Cari Event" wire:model='search' class="mx-8 text-center bg-white border-2 border-purple-500 rounded-full shadow-md md:w-1/2 focus:border-purple-700 focus:shadow-lg">
     </div>
-    <div class="flex flex-col justify-center mx-8  md:mx-10">
+    <div class="flex flex-col justify-center mx-8 md:mx-10">
         <div class="flex flex-wrap justify-center gap-6 my-8">
             @foreach ($event as $item)
                 <div class="w-screen bg-white shadow-lg h-fit rounded-xl md:w-80 hover:scale-105 hover:transition-all hover:ease-in-out">
