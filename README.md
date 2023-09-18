@@ -8,23 +8,23 @@ Project ini merupakan project Sistem Informasi & Landing Page untuk Prodi Teknik
 
 ## Screenshot
 
-[home - landing page](./readme-img/home1.png)
+![home - landing page](./readme-img/home1.png)
 
-[home - profil lulusan](./readme-img//home2.png)
+![home - profil lulusan](./readme-img//home2.png)
 
-[berita](./readme-img/berita.png)
+![berita](./readme-img/berita.png)
 
-[dosen](./readme-img/dosen.png)
+![dosen](./readme-img/dosen.png)
 
-[unduhan](./readme-img/unduhan.png)
+![unduhan](./readme-img/unduhan.png)
 
-[admin-login](./readme-img/login-admin.png)
+![admin-login](./readme-img/login-admin.png)
 
-[admin-dashboard](./readme-img/dashboard-admin.png)
+![admin-dashboard](./readme-img/dashboard-admin.png)
 
-[admin-dosen](./readme-img/dosen-admin.png)
+![admin-dosen](./readme-img/dosen-admin.png)
 
-[admin-tambah-artikel](./readme-img//tambah-artikel.png)
+![admin-tambah-artikel](./readme-img//tambah-artikel.png)
 
 ## Instalation
 
